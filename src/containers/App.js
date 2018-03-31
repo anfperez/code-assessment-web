@@ -5,22 +5,23 @@ import { Container, Row, Col } from 'reactstrap'
 
 //doing some column tests
 const App = () => (
-  <div>
-    <h2>Acme Store</h2>
-    <hr/>
+  <div style={{backgroundColor: 'WhiteSmoke'}} >
     <Container>
-    	<Row>
-    		<Col>
-                <button> View Shopping Cart </button>
-    <ProductsContainer />
-    </Col>
-    </Row>
+        <Row>
+            <Col>
+                <h2>Acme Store</h2>
+            </Col>
+            <Col> 
+                <CartContainer />
+            </Col>
+        </Row>
     </Container>
+    <hr/>
+    <ProductsContainer />
     <hr/>
     <Container>
     	<Row>
     	<Col>
-    <CartContainer />
     </Col>
     </Row>
     </Container>

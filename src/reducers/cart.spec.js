@@ -26,6 +26,15 @@ describe('reducers', () => {
       })
     })
 
+    //if I'm adding new functionality here, I should also be adding a test
+    it('should handle REMOVE_FROM_CART action', () => {
+      expect(cart(initialstate, {type: 'REMOVE_FROM_CART', productId: 1})).toEqual({
+        addedIds:[],
+        quantityById: { 0: 0}
+
+      })
+    })
+
     describe('when product is already in cart', () => {
       it('should handle ADD_TO_CART action', () => {
         const state = {

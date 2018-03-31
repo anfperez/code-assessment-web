@@ -18,12 +18,23 @@ const addToCartUnsafe = productId => ({
   productId
 })
 
+const removeFromCartUnsafe = productId => ({
+  type: types.REMOVE_FROM_CART,
+  productId
+})
+
+//it seems that I should probably use this as the basis for "Remove from Cart"
 export const addToCart = productId => (dispatch, getState) => {
   if (getState().products.byId[productId].inventory > 0) {
     dispatch(addToCartUnsafe(productId))
   }
 }
 
+export const removeFromCart = productId => (dispatch, getState) => {
+  if (getState().productsbyId[productId].inventory > 0) {
+    dispatch(removeFromCartUnsafe(productId))
+  }
+}
 export const checkout = products => (dispatch, getState) => {
   const { cart } = getState()
 

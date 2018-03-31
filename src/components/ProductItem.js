@@ -1,11 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Product from './Product'
-import { Button } from 'reactstrap'
+import { Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 //this controls *only* the items as they display under "Products"
 const ProductItem = ({ product, onAddToCartClicked }) => (
   <div style={{ marginBottom: 20, marginLeft: 20}}>
+  <Card>
+    <CardBody>
     <Product
       title={product.title}
       price={product.price}
@@ -15,6 +18,8 @@ const ProductItem = ({ product, onAddToCartClicked }) => (
       disabled={product.inventory > 0 ? '' : 'disabled'}>
       {product.inventory > 0 ? 'Add to cart' : 'Sold Out'}
     </Button>
+    </CardBody>
+    </Card>
   </div>
 )
 

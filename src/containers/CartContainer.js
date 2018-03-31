@@ -5,10 +5,13 @@ import { checkout } from '../actions'
 import { getTotal, getCartProducts } from '../reducers'
 import Cart from '../components/Cart'
 
-const CartContainer = ({ products, total, checkout }) => (
+//still need to write function that will remove items from the cart
+const CartContainer = ({ products, productName, total, removeFromCart, checkout }) => (
   <Cart
     products={products}
+    productName={products.title}
     total={total}
+    removeFromCart={() => removeFromCart(products)}
     onCheckoutClicked={() => checkout(products)} />
 )
 

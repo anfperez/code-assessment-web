@@ -75,12 +75,20 @@ Later...
 
 Spent a lot of time trying to get the Cart Overlay to work. I did get some sort of Overlay to work, but it looks wonky. I think I'm going to try to work on the Remove_From_Cart method for a bit to clear my head.
 
+Later ...
+
+Ended up spending a lot of time looking at the cart to figure out how it works. The thing I do want to perfect by the end of today is being able to pass the Product name over to the Cart along with its price!
+
 
 ## Second Task
 2. Enhance Cart Functionality
 * "add to cart", "update cart"
 
 "ADD_TO_CART" is going to become a function in constants/ActionTypes.js
+
+### 3/31/2018
+
+So I began learning more about React-Redux. I have to say, I am more familiar with regular React, so learning more about Redux quickly was important for me to understand this task. Today I took a long look at the reducers/ folder as a way for me to understand how exactly Redux works.
 
 ## Third task
 

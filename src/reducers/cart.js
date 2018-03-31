@@ -1,5 +1,6 @@
 import {
   ADD_TO_CART,
+  REMOVE_FROM_CART,
   CHECKOUT_REQUEST,
   CHECKOUT_FAILURE
 } from '../constants/ActionTypes'
@@ -16,6 +17,13 @@ const addedIds = (state = initialState.addedIds, action) => {
         return state
       }
       return [ ...state, action.productId ]
+      //I'm going to need to add a button that links back to REMOVE_FROM_CART. further investigation is needed...
+    case REMOVE_FROM_CART:
+        console.log("removed ADD");
+
+      return [ ...state.slice(0,state.indexOf(action.productId),
+          ...state.slice(state.indexOf(action.productId)+1))
+      ];
     default:
       return state
   }
