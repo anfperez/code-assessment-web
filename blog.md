@@ -60,9 +60,7 @@ installed react-bootstrap, bootstrap, jquery, and popper
 
 Getting weird error. Cannot use Bootstrap right now because it can't locate jQuery in my node modules.
 
-Asked this question on Stack Overflow. https://stackoverflow.com/questions/49589282/bootstrap-in-react-cant-resolve-jquery-module
-
-A user told me that reactstrap was easier to use -- I might try that instead.
+I did some research and found another library called reactstrap. I might try to use this instead.
 npm remove react-bootstrap
 npm remove bootstrap
 
@@ -89,6 +87,10 @@ Ended up spending a lot of time looking at the cart to figure out how it works. 
 ### 3/31/2018
 
 So I began learning more about React-Redux. I have to say, I am more familiar with regular React, so learning more about Redux quickly was important for me to understand this task. Today I took a long look at the reducers/ folder as a way for me to understand how exactly Redux works.
+
+Later...
+
+Read a lot more about the principles of Redux. Can't say I understand perfectly, but I think I can grasp the core principles by now...I think! Well, you can't really understand something until you practice, so let me get going.
 
 ## Third task
 
