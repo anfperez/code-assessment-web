@@ -7,7 +7,7 @@ import thunk from 'redux-thunk'
 import reducer from './reducers'
 import { getAllProducts } from './actions'
 import App from './containers/App'
-import Bootstrap from 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const middleware = [ thunk ];
 if (process.env.NODE_ENV !== 'production') {

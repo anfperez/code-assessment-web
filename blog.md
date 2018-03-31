@@ -56,13 +56,33 @@ I'm starting to think that maybe implementing Bootstrap is the best way to solve
 
 installed react-bootstrap, bootstrap, jquery, and popper
 
+### 3/31/2018
+
+Getting weird error. Cannot use Bootstrap right now because it can't locate jQuery in my node modules.
+
+Asked this question on Stack Overflow. https://stackoverflow.com/questions/49589282/bootstrap-in-react-cant-resolve-jquery-module
+
+A user told me that reactstrap was easier to use -- I might try that instead.
+npm remove react-bootstrap
+npm remove bootstrap
+
+npm install reactstrap 
+Reactstrap docs: https://reactstrap.github.io/
+
+Okay, this seems to work better than using react-bootstrap for now. Let's see how it goes. Styled some fonts and buttons. In order to create the overlay Shopping Cart, I'm going to try to use the "card" property https://reactstrap.github.io/components/card/.
+
+Later...
+
+Spent a lot of time trying to get the Cart Overlay to work. I did get some sort of Overlay to work, but it looks wonky. I think I'm going to try to work on the Remove_From_Cart method for a bit to clear my head.
+
+
 ## Second Task
 2. Enhance Cart Functionality
 * "add to cart", "update cart"
 
 "ADD_TO_CART" is going to become a function in constants/ActionTypes.js
 
-##Third task
+## Third task
 
 Products from the API will replace the static products
 

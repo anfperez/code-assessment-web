@@ -1,18 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Product from './Product'
+import { Button } from 'reactstrap'
 
+//this controls *only* the items as they display under "Products"
 const ProductItem = ({ product, onAddToCartClicked }) => (
-  <div style={{ marginBottom: 20 }}>
+  <div style={{ marginBottom: 20, marginLeft: 20}}>
     <Product
       title={product.title}
       price={product.price}
       inventory={product.inventory} />
-    <button
+    <Button color="primary"
       onClick={onAddToCartClicked}
       disabled={product.inventory > 0 ? '' : 'disabled'}>
       {product.inventory > 0 ? 'Add to cart' : 'Sold Out'}
-    </button>
+    </Button>
   </div>
 )
 
