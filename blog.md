@@ -123,7 +123,9 @@ Later...
 
 OKAY! I finally got a remove button to work! Not exactly in the way I'd want to, just yet. But at least I got a button to work at all. I watched a lot of Redux tutorials and read more articles about Redux, dispatches, stores, how everything works. So I'm happy a version of the Remove button is working. Still needs some work but at least there was progress!
 
-What I did was make it so that when an item is added to the cart, a small card pops up with a remove button next to it. I understand this isn't ideal because the remove button is also present in the ProductsList too. I might need to find a way to disable the button there.
+What I did was make it so that when an item is added to the cart, a small Card pops up with a remove button next to it. I understand this isn't ideal because the remove button is also present in the ProductsList too. I might need to find a way to disable the button there.
+
+I think I need to step back from this particular task right now, and work on a few different things to clear my head. I may try to get the API call to work correctly.
 
 ## Third task
 
@@ -134,3 +136,11 @@ Products from the API will replace the static products
 After some trial and error, I was able to grab the API from the endpoint!
 
 So I was able to call the API using the method I learned. But for some reason the items display three times each, for a total of nine items! I did some sidework with another api and got that one to display properly. So there must be another thing in the code I need to alter to make it not display 3 times. I think I may try to tackle responsiveness first.
+
+### 4/1/18
+
+Going to do some practice calls in Redux so I can get used to it.
+
+Later...
+
+Tried a practice app! But my head is a bit mush so I'm going to go back to the remove/update task to see how I can implement that.

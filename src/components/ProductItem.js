@@ -19,6 +19,11 @@ const ProductItem = ({ product, onAddToCartClicked, onRemoveFromCartClicked }) =
 
       {product.inventory > 0 ? 'Add to cart' : 'Sold Out'}
     </Button>
+          <Button color="success"
+          onClick={onClickIncreaseQuantity}
+          disabled={product.inventory > 0 ? '' : 'disabled'}>
+          {product.inventory > 0 ? 'Add to cart' : 'Sold out'}
+          </Button>
           <Button onClick={onRemoveFromCartClicked}>Remove</Button>
     </CardBody>
     </Card>

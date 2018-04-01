@@ -8,12 +8,7 @@ import ProductItem from '../components/ProductItem'
 import ProductsList from '../components/ProductsList'
 
 //still need to write function that will remove items from the cart
-const CartContainer = ({
-  products,
-  productName,
-  total,
-  checkout,
-  removeFromCart,
+const CartContainer = ({ products, productName, total, checkout, removeFromCart,
 }) => (
   <div>
     <ProductsList title="Products">

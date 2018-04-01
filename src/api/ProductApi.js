@@ -1,35 +1,22 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
 
-//this is what was originally here
-const Product = ({ price, inventory, title }) => (
-  <div>
-    {title} - &#36;{price}{inventory ? ` x ${inventory}` : null}
-  </div>
-)
+//this is how I feel the product api endpoint should be called
+//need to figure out how to get it to work
 
-//testing
-
-//const ProductTitle = ({ Product.title});
-/*
-
-/* wrote the below as an extra component, I don't think I need it
-
-class GetData extends React.Component {
-  constructor() {
-    super();
-  }
-
-  render() {
-    return (
-      <div>
-        <Item />
-      </div>
-    )
+class ProductApi {
+  static getAllProducts() {
+    return
+    fetch('http://tech.work.co/shopping-cart/products.json').then(response =>
+    {
+      return response.json();
+    }).catch(error => {
+      return error;
+    })
   }
 }
 
-class Product2 extends React.Component {
+export default ProductApi;
+/* export default class Product extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -41,7 +28,7 @@ class Product2 extends React.Component {
     .then(results => {
       return results.json();
         }).then(data => {
-          console.log("api successfully called")
+
         let elements = data.map((product) => {
             return (
             <div key={product.results}>
@@ -66,11 +53,4 @@ render() {
 		)
 	}
 }
-
-Product.propTypes = {
-  price: PropTypes.price,
-  inventory: PropTypes.inventory,
-  title: PropTypes.productTitle
-}
-*/
-export default Product
+/*
