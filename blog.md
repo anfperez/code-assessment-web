@@ -92,6 +92,34 @@ Later...
 
 Read a lot more about the principles of Redux. Can't say I understand perfectly, but I think I can grasp the core principles by now...I think! Well, you can't really understand something until you practice, so let me get going.
 
+Later..
+
+I'm going to do some react-redux shopping cart practice. I found some guides and tutorials online, so I'm going to make a side-app to better understand how everything works.
+
+Later...
+I ended up doing a 3-part tutorial about creating a shopping cart using React and Redux. 
+
+Places where I need to configure REMOVE_FROM_CART
+actions/index.js
+constants/ActionTypes.js
+reducers/cart.js
+reducers/product.js
+
+4/1
+
+Still trying to figure out remove_from_cart. I'm going to take a deep dive into add_to_cart to see how it works, where it's connected, etc.
+
+Added this to cart container to see if it will do anything. I am trying to pass in the ID of the product to trigger the removeFromCart function
+
+  <Cart>
+  { products.map(product =>
+    <ProductItem
+    key={product.id}
+    removeFromCartClicked={() => removeFromCart(product.id)} />
+    )}
+  </Cart>
+
+
 ## Third task
 
 Products from the API will replace the static products

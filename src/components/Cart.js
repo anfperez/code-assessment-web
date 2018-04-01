@@ -3,9 +3,11 @@ import PropTypes from 'prop-types'
 import Product from './Product'
 import { Button } from 'reactstrap'
 import ProductItem from './ProductItem'
+import { connect } from 'react-redux'
+import { removeFromCart } from '../actions/index.js'
 
 //this controls the way the products look when they get placed inside the cart
-const Cart  = ({ products, title, total, onCheckoutClicked }) => {
+const Cart  = ({ products, title, total, removeFromCart, onCheckoutClicked }) => {
   const hasProducts = products.length > 0
   const nodes = hasProducts ? (
     products.map(product =>
@@ -23,7 +25,8 @@ const Cart  = ({ products, title, total, onCheckoutClicked }) => {
   return (
     <div>
       <h3>Your Cart</h3>
-      <div>{nodes}</div>
+      <div>{nodes}</div> 
+      <Button color="primary" onClick={removeFromCart}> Remove </Button>
       <p> Title: { Product.title} </p>
       <p>Total: &#36;{ total}</p>
       <Button color="secondary" onClick={onCheckoutClicked}
@@ -37,7 +40,8 @@ const Cart  = ({ products, title, total, onCheckoutClicked }) => {
 Cart.propTypes = {
   products: PropTypes.array,
   total: PropTypes.string,
-  onCheckoutClicked: PropTypes.func
+  onCheckoutClicked: PropTypes.func,
+  removeFromCart: PropTypes.func
 }
 
 export default Cart

@@ -21,9 +21,10 @@ const addedIds = (state = initialState.addedIds, action) => {
     case REMOVE_FROM_CART:
         console.log("removed ADD");
 
-      return [ ...state.slice(0,state.indexOf(action.productId),
-          ...state.slice(state.indexOf(action.productId)+1))
-      ];
+        return state.filter( i => i.id != action.productId)
+      //return [ ...state.slice(0,state.indexOf(action.productId),
+        //  ...state.slice(state.indexOf(action.productId)+1))
+    //  ];
     default:
       return state
   }
@@ -32,10 +33,24 @@ const addedIds = (state = initialState.addedIds, action) => {
 const quantityById = (state = initialState.quantityById, action) => {
   switch (action.type) {
     case ADD_TO_CART:
+    //temporarily turning this off to test
       const { productId } = action
       return { ...state,
         [productId]: (state[productId] || 0) + 1
       }
+    case REMOVE_FROM_CART:
+      return state.filter(productId => action.productId !== productId)
+     /* 
+     const { productId2 } = action
+      return { ...state,
+        [productId]: (state[productId] || 0) + 2 
+      }
+      /*
+      console.log("removed ADD");
+      
+      return { ...state.slice(0,state.indexOf(action.productId),
+          ...state.slice(state.indexOf(action.productId)+1)) }
+          */
     default:
       return state
   }

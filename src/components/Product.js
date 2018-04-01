@@ -8,6 +8,7 @@ const Product = ({ price, inventory, title }) => (
   </div>
 )
 
+//const ProductTitle = ({ Product.title});
 /*
 
 /* wrote the below as an extra component, I don't think I need it

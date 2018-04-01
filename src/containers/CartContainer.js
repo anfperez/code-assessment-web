@@ -4,15 +4,29 @@ import { connect } from 'react-redux'
 import { checkout } from '../actions'
 import { getTotal, getCartProducts } from '../reducers'
 import Cart from '../components/Cart'
+import ProductItem from '../components/ProductItem'
+import ProductsList from '../components/ProductsList'
 
 //still need to write function that will remove items from the cart
 const CartContainer = ({ products, productName, total, removeFromCart, checkout }) => (
+  <div>
+  <ProductsList title="Products">
+    {products.map(product =>
+      <ProductItem
+        key={product.id}
+        product={product}
+        onRemoveFromCartClicked={() => removeFromCart(product.id)} />
+    )}
+
+  </ProductsList>
   <Cart
     products={products}
     productName={products.title}
     total={total}
-    removeFromCart={() => removeFromCart(products)}
+    // onAddToCartClicked={() => addToCart(product.id)}
+   // onRemoveFromCartClicked={() => removeFromCart(product.id)}
     onCheckoutClicked={() => checkout(products)} />
+    </div>
 )
 
 CartContainer.propTypes = {
@@ -23,7 +37,8 @@ CartContainer.propTypes = {
     quantity: PropTypes.number.isRequired
   })).isRequired,
   total: PropTypes.string,
-  checkout: PropTypes.func.isRequired
+  checkout: PropTypes.func.isRequired,
+  removeFromCart: PropTypes.func.isRequired
 }
 
 const mapStateToProps = (state) => ({
@@ -31,7 +46,12 @@ const mapStateToProps = (state) => ({
   total: getTotal(state)
 })
 
+/*
+const mapDispatchToProps = (dispatch) => {
+  return {
+    removeFromCart: product => dispatch(removeFromCart(product)),
+  }
+}
+*/
 export default connect(
-  mapStateToProps,
-  { checkout }
-)(CartContainer)
+  mapStateToProps, { checkout })(CartContainer);

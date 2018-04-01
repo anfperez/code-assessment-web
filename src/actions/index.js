@@ -23,17 +23,22 @@ const removeFromCartUnsafe = productId => ({
   productId
 })
 
+
 //it seems that I should probably use this as the basis for "Remove from Cart"
 export const addToCart = productId => (dispatch, getState) => {
   if (getState().products.byId[productId].inventory > 0) {
+  console.log("clicked")
     dispatch(addToCartUnsafe(productId))
   }
 }
 
+//I need to somehow tell this function to remove an item from the cart
 export const removeFromCart = productId => (dispatch, getState) => {
-  if (getState().productsbyId[productId].inventory > 0) {
+   console.log('this was clicked')
+  if (getState().productsbyId[productId].inventory < 0) {
     dispatch(removeFromCartUnsafe(productId))
   }
+  console.log('this was clicked')
 }
 export const checkout = products => (dispatch, getState) => {
   const { cart } = getState()
