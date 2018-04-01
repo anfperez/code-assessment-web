@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import { removeFromCart } from '../actions/index.js'
 
 //this controls the way the products look when they get placed inside the cart
-const Cart  = ({ products, title, total, removeFromCart, onCheckoutClicked }) => {
+const Cart  = ({ products, title, total, removeFromCart, onCheckoutClicked, onRemoveFromCartClicked }) => {
   const hasProducts = products.length > 0
   const nodes = hasProducts ? (
     products.map(product =>
@@ -26,7 +26,7 @@ const Cart  = ({ products, title, total, removeFromCart, onCheckoutClicked }) =>
     <div>
       <h3>Your Cart</h3>
       <div>{nodes}</div> 
-      <Button color="primary" onClick={removeFromCart}> Remove </Button>
+      <Button color="primary" onClick={onRemoveFromCartClicked}> Remove </Button>
       <p> Title: { Product.title} </p>
       <p>Total: &#36;{ total}</p>
       <Button color="secondary" onClick={onCheckoutClicked}

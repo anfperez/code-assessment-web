@@ -35,7 +35,7 @@ export const addToCart = productId => (dispatch, getState) => {
 //I need to somehow tell this function to remove an item from the cart
 export const removeFromCart = productId => (dispatch, getState) => {
    console.log('this was clicked')
-  if (getState().productsbyId[productId].inventory < 0) {
+  if (getState().cart.quantityById[productId] > 0) {
     dispatch(removeFromCartUnsafe(productId))
   }
   console.log('this was clicked')

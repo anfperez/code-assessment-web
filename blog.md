@@ -119,6 +119,11 @@ Added this to cart container to see if it will do anything. I am trying to pass 
     )}
   </Cart>
 
+Later...
+
+OKAY! I finally got a remove button to work! Not exactly in the way I'd want to, just yet. But at least I got a button to work at all. I watched a lot of Redux tutorials and read more articles about Redux, dispatches, stores, how everything works. So I'm happy a version of the Remove button is working. Still needs some work but at least there was progress!
+
+What I did was make it so that when an item is added to the cart, a small card pops up with a remove button next to it. I understand this isn't ideal because the remove button is also present in the ProductsList too. I might need to find a way to disable the button there.
 
 ## Third task
 

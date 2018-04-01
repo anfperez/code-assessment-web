@@ -21,7 +21,7 @@ const addedIds = (state = initialState.addedIds, action) => {
     case REMOVE_FROM_CART:
         console.log("removed ADD");
 
-        return state.filter( i => i.id != action.productId)
+        return state.filter(id => id !== action.productId);
       //return [ ...state.slice(0,state.indexOf(action.productId),
         //  ...state.slice(state.indexOf(action.productId)+1))
     //  ];
@@ -39,7 +39,7 @@ const quantityById = (state = initialState.quantityById, action) => {
         [productId]: (state[productId] || 0) + 1
       }
     case REMOVE_FROM_CART:
-      return state.filter(productId => action.productId !== productId)
+      return { ...state, [action.productId]: state[action.productId] - 1 }; //
      /* 
      const { productId2 } = action
       return { ...state,

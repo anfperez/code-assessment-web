@@ -5,7 +5,7 @@ import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 //this controls *only* the items as they display under "Products"
-const ProductItem = ({ product, onAddToCartClicked }) => (
+const ProductItem = ({ product, onAddToCartClicked, onRemoveFromCartClicked }) => (
   <div style={{ marginBottom: 20, marginLeft: 20}}>
   <Card>
     <CardBody>
@@ -16,8 +16,10 @@ const ProductItem = ({ product, onAddToCartClicked }) => (
     <Button color="primary"
       onClick={onAddToCartClicked}
       disabled={product.inventory > 0 ? '' : 'disabled'}>
+
       {product.inventory > 0 ? 'Add to cart' : 'Sold Out'}
     </Button>
+          <Button onClick={onRemoveFromCartClicked}>Remove</Button>
     </CardBody>
     </Card>
   </div>
