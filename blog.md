@@ -1,3 +1,5 @@
+Test change
+
 #Blog - Angela's Thoughts on the Code Assignment
 
 Thanks for giving me the opportunity to challenge myself. I am a very visual learner. I do very well from watching code tutorials on Youtube or reading through written walkthroughs on how to do a particular task. I always believe that if I can't solve something on my own, there will always be an answer, somehow.
