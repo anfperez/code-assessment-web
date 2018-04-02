@@ -77,6 +77,14 @@ Later ...
 
 Ended up spending a lot of time looking at the cart to figure out how it works. The thing I do want to perfect by the end of today is being able to pass the Product name over to the Cart along with its price!
 
+Later ...
+
+I've been looking at this code literally all day. I think I'm finally beginning to understand how everything works in Redux. The concept of 'state' was sort of foreign to me, but now I think I'm beginning to understand, along with dispatch, etc. I've been working on adding some functionality so that the item names will display when the item is placed into the cart. I came across a very strange bug that causes the entire app to break once I click "Add to Cart". Wonder what's going on...
+
+Later ...
+
+Well, I accessed an Object that I need to grab data out of, somehow. I think I need to work on this tomorrow.
+
 
 ## Second Task
 2. Enhance Cart Functionality
@@ -126,6 +134,18 @@ OKAY! I finally got a remove button to work! Not exactly in the way I'd want to,
 What I did was make it so that when an item is added to the cart, a small Card pops up with a remove button next to it. I understand this isn't ideal because the remove button is also present in the ProductsList too. I might need to find a way to disable the button there.
 
 I think I need to step back from this particular task right now, and work on a few different things to clear my head. I may try to get the API call to work correctly.
+
+Later...
+
+So, now I'm ready to start looking at how I can implement the Update Cart method. I am thinking that having two methods -- decrease_quantity and increase_quantity -- are the way to go with this. So, using the remove_from_cart method as a basis, hopefully I can try to accomplish what's needed.
+
+Based on what I had to do for remove_from_cart, here are the files I think I need to change for 
+productItem.js
+reducer/product.js
+productcontainer.js
+actions/index.js
+
+Added + or - buttons in preparation for this. Let's see if I can successfully figure out how to do this.
 
 ## Third task
 

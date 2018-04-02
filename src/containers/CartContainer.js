@@ -2,16 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { checkout, removeFromCart } from '../actions'
-import { getTotal, getCartProducts } from '../reducers'
+import { getTotal, getCartProducts, listProductNames } from '../reducers'
 import Cart from '../components/Cart'
 import ProductItem from '../components/ProductItem'
 import ProductsList from '../components/ProductsList'
 
 //still need to write function that will remove items from the cart
-const CartContainer = ({ products, productName, total, checkout, removeFromCart,
+const CartContainer = ({ products, productName, total, checkout, removeFromCart, names
 }) => (
   <div>
-    <ProductsList title="Products">
+    <ProductsList>
       {products.map(product => (
         <ProductItem
           key={product.id}
@@ -22,8 +22,9 @@ const CartContainer = ({ products, productName, total, checkout, removeFromCart,
     </ProductsList>
     <Cart
       products={products}
-      productName={products.title}
+     // productName={products.title}
       total={total}
+      names={names}
       onCheckoutClicked={() => checkout(products)}
     />
   </div>
@@ -43,7 +44,8 @@ CartContainer.propTypes = {
 
 const mapStateToProps = (state) => ({
   products: getCartProducts(state),
-  total: getTotal(state)
+  total: getTotal(state),
+  names: listProductNames(state)
 })
 
 /*

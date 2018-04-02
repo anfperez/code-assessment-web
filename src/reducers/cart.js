@@ -7,7 +7,8 @@ import {
 
 const initialState = {
   addedIds: [],
-  quantityById: {}
+  quantityById: {},
+  addedNames: []
 }
 
 const addedIds = (state = initialState.addedIds, action) => {
@@ -25,6 +26,18 @@ const addedIds = (state = initialState.addedIds, action) => {
       //return [ ...state.slice(0,state.indexOf(action.productId),
         //  ...state.slice(state.indexOf(action.productId)+1))
     //  ];
+    default:
+      return state
+  }
+}
+
+const addedNames = (state = initialState.addedIds, action) => {
+  switch (action.type) {
+    case ADD_TO_CART:
+      if (state.indexOf(action.productId) !== -1 ) {
+        return state
+      }
+      return [ ...state, action.productTitle]
     default:
       return state
   }
@@ -61,6 +74,8 @@ export const getQuantity = (state, productId) =>
 
 export const getAddedIds = state => state.addedIds
 
+export const getAddedNames = state => state.addedNames
+
 const cart = (state = initialState, action) => {
   switch (action.type) {
     case CHECKOUT_REQUEST:
@@ -70,7 +85,8 @@ const cart = (state = initialState, action) => {
     default:
       return {
         addedIds: addedIds(state.addedIds, action),
-        quantityById: quantityById(state.quantityById, action)
+        quantityById: quantityById(state.quantityById, action),
+        addedNames: addedNames(state.addedNames, action)
       }
   }
 }

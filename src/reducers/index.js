@@ -10,6 +10,7 @@ export default combineReducers({
 const getAddedIds = state => fromCart.getAddedIds(state.cart)
 const getQuantity = (state, id) => fromCart.getQuantity(state.cart, id)
 const getProduct = (state, id) => fromProducts.getProduct(state.products, id)
+const getAddedNames = (state, id) => fromCart.getAddedNames(state.cart, id)
 
 export const getTotal = state =>
   getAddedIds(state)
@@ -23,4 +24,10 @@ export const getCartProducts = state =>
   getAddedIds(state).map(id => ({
     ...getProduct(state, id),
     quantity: getQuantity(state, id)
+  }))
+
+export const listProductNames = state =>
+  getAddedIds(state).map(id => ({
+    ...getProduct(state, id),
+    names: getAddedNames(state, id)
   }))

@@ -5,9 +5,14 @@ import { Button } from 'reactstrap'
 import ProductItem from './ProductItem'
 import { connect } from 'react-redux'
 import { removeFromCart } from '../actions/index.js'
+// import logo from '.../assets/shoppingcart.ico'
+
+const shoppingCartmessage = {
+  fontSize: '12px'
+}
 
 //this controls the way the products look when they get placed inside the cart
-const Cart  = ({ products, title, total, removeFromCart, onCheckoutClicked, onRemoveFromCartClicked }) => {
+const Cart  = ({ products, total, names, removeFromCart, onCheckoutClicked, onRemoveFromCartClicked }) => {
   const hasProducts = products.length > 0
   const nodes = hasProducts ? (
     products.map(product =>
@@ -19,15 +24,16 @@ const Cart  = ({ products, title, total, removeFromCart, onCheckoutClicked, onRe
       />
     )
   ) : (
-    <em>Your Shopping Cart is empty.</em>
+  <div>
+    <p style={shoppingCartmessage}><em>Your Shopping Cart is empty.</em></p>
+    </div>
   )
 
   return (
     <div>
       <h3>Your Cart</h3>
       <div>{nodes}</div> 
-      <Button color="primary" onClick={onRemoveFromCartClicked}> Remove </Button>
-      <p> Title: { Product.title} </p>
+      <p> Items: { JSON.stringify(names.title) } </p>
       <p>Total: &#36;{ total}</p>
       <Button color="secondary" onClick={onCheckoutClicked}
         disabled={hasProducts ? '' : 'disabled'}>
@@ -41,7 +47,8 @@ Cart.propTypes = {
   products: PropTypes.array,
   total: PropTypes.string,
   onCheckoutClicked: PropTypes.func,
-  removeFromCart: PropTypes.func
+  removeFromCart: PropTypes.func,
+  names: PropTypes.array
 }
 
 export default Cart

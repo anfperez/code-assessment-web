@@ -4,10 +4,14 @@ import Product from './Product'
 import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
 
+let cardStyle = {
+  width: '100%'
+}
+
 //this controls *only* the items as they display under "Products"
-const ProductItem = ({ product, onAddToCartClicked, onRemoveFromCartClicked }) => (
+const ProductItem = ({product, onAddToCartClicked, onRemoveFromCartClicked, onIncreaseQuanityClicked, onDecreaseQuantityClicked }) => (
   <div style={{ marginBottom: 20, marginLeft: 20}}>
-  <Card>
+  <Card style={cardStyle}>
     <CardBody>
     <Product
       title={product.title}
@@ -20,11 +24,15 @@ const ProductItem = ({ product, onAddToCartClicked, onRemoveFromCartClicked }) =
       {product.inventory > 0 ? 'Add to cart' : 'Sold Out'}
     </Button>
           <Button color="success"
-          onClick={onClickIncreaseQuantity}
-          disabled={product.inventory > 0 ? '' : 'disabled'}>
-          {product.inventory > 0 ? 'Add to cart' : 'Sold out'}
+            onClick={onIncreaseQuanityClicked}
+            disabled={product.inventory > 0 ? '' : 'disabled'}> +
           </Button>
-          <Button onClick={onRemoveFromCartClicked}>Remove</Button>
+          <Button color="danger"
+            onclick={onDecreaseQuantityClicked} 
+            disabled={product.inventory > 0 ? '' : 'disabled'}> - 
+            </Button>
+
+      <Button onClick={onRemoveFromCartClicked}>Remove</Button>
     </CardBody>
     </Card>
   </div>
@@ -36,7 +44,10 @@ ProductItem.propTypes = {
     price: PropTypes.number.isRequired,
     inventory: PropTypes.number.isRequired
   }).isRequired,
-  onAddToCartClicked: PropTypes.func.isRequired
+  onAddToCartClicked: PropTypes.func.isRequired,
+  onRemoveFromCartClicked: PropTypes.func.isRequired,
+  onIncreaseQuanityClicked: PropTypes.func.isRequired,
+  onDecreaseQuantityClicked: PropTypes.func.isRequired
 }
 
 export default ProductItem

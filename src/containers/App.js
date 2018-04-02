@@ -3,9 +3,13 @@ import ProductsContainer from './ProductsContainer'
 import CartContainer from './CartContainer'
 import { Container, Row, Col } from 'reactstrap'
 
+const appStyle = {
+    backgroundColor: 'WhiteSmoke',
+    float: 'none'
+}
 //doing some column tests
 const App = () => (
-  <div style={{backgroundColor: 'WhiteSmoke'}} >
+  <div style={appStyle} >
     <Container>
         <Row>
             <Col>
