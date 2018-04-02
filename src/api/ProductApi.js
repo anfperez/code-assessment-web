@@ -3,6 +3,7 @@ import React from 'react';
 //this is how I feel the product api endpoint should be called
 //need to figure out how to get it to work
 
+/*
 class ProductApi {
   static getAllProducts() {
     return
@@ -14,9 +15,11 @@ class ProductApi {
     })
   }
 }
+*/
 
-export default ProductApi;
-/* export default class Product extends React.Component {
+const productArray = []
+
+class ProductApi extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -29,6 +32,10 @@ export default ProductApi;
       return results.json();
         }).then(data => {
 
+    for (let i =0; i < data.length; i++) {
+      productArray.push(data[0])
+      console.log(productArray)
+    }
         let elements = data.map((product) => {
             return (
             <div key={product.results}>
@@ -40,8 +47,10 @@ export default ProductApi;
     })
     this.setState({elements: elements});
     console.log("state", this.state.elements);
-  })
+})
 }
+
+
 
 render() {
   return (
@@ -53,4 +62,7 @@ render() {
 		)
 	}
 }
-/*
+
+const products = productArray.toString();
+
+export default ProductApi; products

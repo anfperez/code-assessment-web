@@ -7,6 +7,7 @@ import ProductItem from '../components/ProductItem'
 import ProductsList from '../components/ProductsList'
 import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
+import ProductApi from '../api/ProductApi';
 
 
 const ProductsContainer = ({ products, addToCart, increaseQuantity, decreaseQuantity }) => (

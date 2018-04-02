@@ -1,7 +1,8 @@
 /**
  * Mocking client-server processing
  */
-import _products from './products.json'
+import _products from './ProductApi.js'
+import productArray from './ProductApi.js'
 
 const TIMEOUT = 100
 

@@ -13,7 +13,7 @@ const shoppingCartmessage = {
 
 //this controls the way the products look when they get placed inside the cart
 const Cart  = ({ products, total, names, removeFromCart, onCheckoutClicked, onRemoveFromCartClicked }) => {
-  let a = JSON.stringify(names)
+  //const a = JSON.stringify(names[0].title
   /* the following is my practice code, trying to extract the "title" from the names object/array I created. I have not yet been able to achieve this. maybe in a few more days 
   let a = JSON.stringify(names[0])
   let b = typeof (JSON.stringify(names[0]))
@@ -67,7 +67,7 @@ const Cart  = ({ products, total, names, removeFromCart, onCheckoutClicked, onRe
     <div>
       <h3>Your Cart</h3>
       <div>{nodes}</div> 
-      <p> Items: { a } </p>
+      <p> Items: { JSON.stringify(names) } </p>
       <p> Total Items in Cart: {names.length } </p>
       <p>Total: &#36;{ total}</p>
       <Button color="secondary" onClick={onCheckoutClicked}

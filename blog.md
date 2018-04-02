@@ -172,3 +172,16 @@ Going to do some practice calls in Redux so I can get used to it.
 Later...
 
 Tried a practice app! But my head is a bit mush so I'm going to go back to the remove/update task to see how I can implement that.
+
+### 4/2/18
+
+What I think I need to do is the following
+-get JSON data from website
+-write JSON to a file in /api
+-replace "_products" in api/shop.js with the new file_
+And everytime the page reloads, or the data in the API changes, a new file will regenerate
+
+Later ...
+
+after some brief investigation, I realized that Node.js is a server-side language and I therefore cannot save to file with it. So, I'm going to need to find another solution for all this.
+
