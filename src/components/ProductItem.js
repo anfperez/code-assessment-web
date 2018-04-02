@@ -9,6 +9,7 @@ let cardStyle = {
 }
 
 //this controls *only* the items as they display under "Products"
+//I need to find a way to indicate how many items are in the cart and which aren't
 const ProductItem = ({product, onAddToCartClicked, onRemoveFromCartClicked, onIncreaseQuanityClicked, onDecreaseQuantityClicked }) => (
   <div style={{ marginBottom: 20, marginLeft: 20}}>
   <Card style={cardStyle}>
@@ -23,16 +24,17 @@ const ProductItem = ({product, onAddToCartClicked, onRemoveFromCartClicked, onIn
 
       {product.inventory > 0 ? 'Add to cart' : 'Sold Out'}
     </Button>
-          <Button color="success"
-            onClick={onIncreaseQuanityClicked}
-            disabled={product.inventory > 0 ? '' : 'disabled'}> +
-          </Button>
-          <Button color="danger"
-            onclick={onDecreaseQuantityClicked} 
-            disabled={product.inventory > 0 ? '' : 'disabled'}> - 
-            </Button>
+    <Button color="success"
+      onClick={onIncreaseQuanityClicked}
+      disabled={product.inventory > 0 ? '' : 'disabled'}> +
+    </Button>
+    <Button color="danger"
+      onclick={onDecreaseQuantityClicked} 
+      disabled={product.inventory > 0 ? '' : 'disabled'}> - 
+      </Button>
 
       <Button onClick={onRemoveFromCartClicked}>Remove</Button>
+      <p> Quantity in Cart: {product.inventory}</p>
     </CardBody>
     </Card>
   </div>

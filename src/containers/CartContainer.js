@@ -24,7 +24,7 @@ const CartContainer = ({ products, productName, total, checkout, removeFromCart,
       products={products}
      // productName={products.title}
       total={total}
-      names={names}
+      names={ names}
       onCheckoutClicked={() => checkout(products)}
     />
   </div>

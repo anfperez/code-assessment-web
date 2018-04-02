@@ -36,29 +36,29 @@ const decreaseQuantityUnsafe = productId => ({
 //it seems that I should probably use this as the basis for "Remove from Cart"
 export const addToCart = productId => (dispatch, getState) => {
   if (getState().products.byId[productId].inventory > 0) {
-  console.log("clicked")
+  console.log('addToCart was clicked')
     dispatch(addToCartUnsafe(productId))
   }
 }
 
 //I need to somehow tell this function to remove an item from the cart
 export const removeFromCart = productId => (dispatch, getState) => {
-   console.log('this was clicked')
+   console.log('removeFromCart was clicked')
   if (getState().cart.quantityById[productId] > 0) {
     dispatch(removeFromCartUnsafe(productId))
   }
-  console.log('this was clicked')
 }
 
 export const increaseQuantity = productId => (dispatch, getState) => {
   if(getState().cart.quantityById[productId] > 0 ) {
-    console.log("this was clicked")
+    console.log('increaseQuantity was clicked')
     dispatch(increaseQuantityUnsafe[productId])
   }
 }
 
 export const decreaseQuantity = productId => (dispatch, getState) => {
   if(getState().cart.quantityById[productId] > 0 ) {
+    console.log('decreaseQuantity was clicked')
     dispatch(decreaseQuantityUnsafe[productId])
   }
 }

@@ -87,6 +87,12 @@ Later ...
 
 Well, I accessed an Object that I need to grab data out of, somehow. I think I need to work on this tomorrow.
 
+4/2/2018
+
+I tried a lot of methods to extract that information out of the "names" object, which somehow becomes an Object along the way, but an object I can't really get into. It shouldn't be this hard to access data from it. You can currently see my frustrations in a big comment in Cart.js. I think this will have to be something I come back to later. For now, at least I can access the array of info, so that should lead to something.
+
+Also, the "Items in Cart" updates, but not for each individual item :/
+
 
 ## Second Task
 2. Enhance Cart Functionality

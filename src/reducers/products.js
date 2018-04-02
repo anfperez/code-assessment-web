@@ -20,11 +20,13 @@ const products = (state, action) => {
         inventory: state.inventory + 1
       }
     case INCREASE_QUANTITY:
+      console.log('quantity increased')
       return {
         ...state,
         inventory: state.inventory + 1
       }
     case DECREASE_QUANTITY:
+      console.log('quantity decreased')
       return {
         ...state,
         inventory: state.inventory - 1

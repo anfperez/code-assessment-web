@@ -9,7 +9,7 @@ import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 
-const ProductsContainer = ({ products, addToCart }) => (
+const ProductsContainer = ({ products, addToCart, increaseQuantity, decreaseQuantity }) => (
   <ProductsList title="Products">
     {products.map(product =>
       <ProductItem
@@ -30,7 +30,8 @@ ProductsContainer.propTypes = {
     inventory: PropTypes.number.isRequired
   })).isRequired,
   addToCart: PropTypes.func.isRequired,
-  increaseQuantity: PropTypes.func.isRequired
+  increaseQuantity: PropTypes.func.isRequired,
+  decreaseQuantity: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => ({
