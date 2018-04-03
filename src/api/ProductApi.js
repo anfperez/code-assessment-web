@@ -17,52 +17,57 @@ class ProductApi {
 }
 */
 
-const productArray = []
-
 class ProductApi extends React.Component {
   constructor() {
     super();
     this.state = {
-      elements: [],
+      productJSON: [],
+      elements: []
     };
   }
-  componentWillMount() {
+  componentDidMount() {
     fetch('http://tech.work.co/shopping-cart/products.json')
-    .then(results => {
-      return results.json();
-        }).then(data => {
+      .then(results => {
+        return results.json();
+      }).then(data => {
 
+    let productArray = []
     for (let i =0; i < data.length; i++) {
-      productArray.push(data[0])
-      console.log(productArray)
-    }
-        let elements = data.map((product) => {
-            return (
-            <div key={product.results}>
-              <p>{product.productTitle} </p>
-              <p>{product.price.value} {product.price.currency}</p>
-              <p>{product.inventory}</p>
-            </div>
+      productArray.push(data[i])
+      }
+    console.log("jsonproduct=" + JSON.stringify(productArray))
+
+    let productJSON = JSON.stringify(productArray)
+
+
+    let elements = data.map((product) => {
+      return (
+        <div key={product.results}>
+          <p>{product.productTitle}</p>
+          <p>{product.price.value} {product.price.currency}</p>
+        </div>
         )
     })
+    
     this.setState({elements: elements});
-    console.log("state", this.state.elements);
-})
+   this.setState({productJSON: productJSON});
+    console.log("state", this.state.elements[0]);
+    this.setState({productJSON: productJSON});
+
+    console.log(productJSON) // this is the exact thing I need to get!!!
+  })
+  // console.log(productJSON) is this the extent of where I can access productJSON? it won't log to the console here...
+  }
+
+  render() {
+    return (
+      <div>
+        <div className="container2">
+          {this.state.productJSON}
+        </div>
+      </div>
+      )
+    }
 }
 
-
-
-render() {
-  return (
-    <div>
-    	<div className="container2">
-    		{this.state.elements}
-  		</div>
-  	</div>
-		)
-	}
-}
-
-const products = productArray.toString();
-
-export default ProductApi; products
+export default ProductApi

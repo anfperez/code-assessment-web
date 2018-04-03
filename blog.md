@@ -185,3 +185,11 @@ Later ...
 
 after some brief investigation, I realized that Node.js is a server-side language and I therefore cannot save to file with it. So, I'm going to need to find another solution for all this.
 
+Later...
+
+So I watched a few tutorials and did some work in a small application I built just to test api calls. It seems to have worked. One really important thing I learned more about was .fetch() and also the importance of state. I know React and Redux are all about managing states, but I feel like I'm finally beginning to understand the concept.
+
+### 4/3/18
+
+I am still working on the right way to export the JSON out of the API call and into "products" successfully. I feel like I -almost- have it, but not just yet...
+
