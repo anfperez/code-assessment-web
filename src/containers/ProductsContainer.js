@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { addToCart, increaseQuantity, decreaseQuantity } from '../actions'
-import { getVisibleProducts } from '../reducers/products'
+import { getVisibleIds } from '../reducers/products'
 import ProductItem from '../components/ProductItem'
 import ProductsList from '../components/ProductsList'
 import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
-import ProductApi from '../api/ProductApi';
+// import ProductApi from '../api/ProductApi';
 
 
 const ProductsContainer = ({ products, addToCart, increaseQuantity, decreaseQuantity }) => (
@@ -36,7 +36,7 @@ ProductsContainer.propTypes = {
 }
 
 const mapStateToProps = state => ({
-  products: getVisibleProducts(state.products)
+  products: getVisibleIds(state.products)
 })
 
 export default connect(

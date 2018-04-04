@@ -193,3 +193,30 @@ So I watched a few tutorials and did some work in a small application I built ju
 
 I am still working on the right way to export the JSON out of the API call and into "products" successfully. I feel like I -almost- have it, but not just yet...
 
+Today I decided to test out some things in shop.api. I know that is where 'products' is being collected but I have to figure out how I can sucessfully 'port' the JSON over to the getProducts() call. I thought my code was correct. I'm wondering if I should rename some variables instead.
+
+I feel like I may have extracted the json correctly? But "products.reduce" isn't working properly. I'm going to need to review the usage of array.reduce and why it wouldn't be working in this instance.
+
+Later...
+
+Learned a lot more about how the Array.reduce method works! So now I'm going to try running it on products to see what it's actually pulling out...
+
+Had a strange breakthrough. Earlier I was doing this to look at what the JSON data looked like, in console.
+
+console.log("products looks like" + products);
+
+And it was giving me: [Object object] 3 times
+
+But later, I wrote
+
+console.log(products)
+
+And it gave me the actual product array!! So it seems that I can't output products with any string, it will just give me a weird Object object syntax.
+
+So the difference here is, when the static JSON file passes its data shop.js, it's passing an array. When I try to extract the data from the API, I end up passing like...an array of arrays. It comes out as 'products:products{ data}'. Weird. need to figure out why this is happening so that reduce can work properly.
+
+Okay I know what I need to do, I need to get the value of products from inside ProductApi and append it to the products array I initialized before! How can I do this!!!
+
+Later ...
+
+after a long while, I realized that my API call does not have to be initialized with a class at all! I was over complicating things. I took a step back and decided to just make a constant that would perform the API call. I think things are way easier this way, especially using fetch. Still haven't been able to get it work correctly, though.

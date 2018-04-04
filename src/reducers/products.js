@@ -36,6 +36,9 @@ const products = (state, action) => {
   }
 }
 
+//I understand a bit more of how reduce works. I need to investigate further but I need to figure out
+//1) if products is a JSON array
+//2) what reduce was returning out of products
 const byId = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_PRODUCTS:
@@ -75,5 +78,5 @@ export default combineReducers({
 export const getProduct = (state, id) =>
   state.byId[id]
 
-export const getVisibleProducts = state =>
+export const getVisibleIds = state =>
   state.visibleIds.map(id => getProduct(state, id))

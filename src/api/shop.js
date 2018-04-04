@@ -1,11 +1,18 @@
 /**
  * Mocking client-server processing
  */
- /*
-import React from 'react'
+ //this is the right way~ commenting it out for now to test
+/*
+import _products from './products.json'
 
 const TIMEOUT = 100
 
+export default {
+  getProducts: (cb, timeout) => setTimeout(() => cb(_products), timeout || TIMEOUT),
+  buyProducts: (payload, cb, timeout) => setTimeout(() => cb(), timeout || TIMEOUT)
+}
+
+/*
 let products;
 class ProductApi extends React.Component {
   constructor() {
@@ -62,11 +69,12 @@ export default {
   buyProducts: (payload, cb, timeout) => setTimeout(() => cb(), timeout || TIMEOUT)
 }
 */
+/*
 import React from 'react'
 
 const TIMEOUT = 100
 
-let products;
+let products = []
 
 class ProductTable extends React.Component {
   render() {
@@ -94,7 +102,13 @@ class ProductTable extends React.Component {
     );
   }
 }
+*/
+import React from 'react'
 
+const TIMEOUT = 100
+
+//let products = []
+/*
 class ProductApi extends React.Component {
   constructor() {
     super();
@@ -109,15 +123,15 @@ class ProductApi extends React.Component {
         return results.json();
       }).then(data => {
 
-    let products = []
+    let tempArray = []
     for (let i =0; i < data.length; i++) {
-      products.push(data[i])
+      tempArray.push(data[i])
       }
-    console.log("json looks like" + JSON.stringify(products))
-
-   this.setState({products: products});
+    
+    this.setState({products: tempArray});
 
     console.log(products)
+    products = {this.state.products}
   });
   }
 
@@ -132,9 +146,31 @@ class ProductApi extends React.Component {
       )
     }
 }
+*/
+  const fetchData = () => {
+   return fetch('http://tech.work.co/shopping-cart/products.json')
+    .then(results => results.json())
+   // .then(products => products)
+    }
+  /*
+    fetch('http://tech.work.co/shopping-cart/products.json')
+    .then(results => {
+      return results.json();
+    })
+    */
+  //}
+    //this.setState({products: tempArray});
+
+   // console.log(products)
+   // products = {this.state.products}
+  //})
+    //}
+//I know what I need to do! I need to get the value of Products from inside ProductApi and somehow save it as the value of products!!!!
 
 
 export default {
-  getProducts: (cb, timeout) => setTimeout(() => cb({ products }), timeout || TIMEOUT),
-  buyProducts: (payload, cb, timeout) => setTimeout(() => cb(), timeout || TIMEOUT)
+
+  getProducts: (cb, timeout) => setTimeout(() => cb(fetchData().then(response => response)), timeout || TIMEOUT),
+
+  buyProducts: (payload, cb, timeout) => setTimeout(() => cb(), timeout || TIMEOUT),
 }
