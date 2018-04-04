@@ -38,12 +38,13 @@ Note: You're encouraged to show your work by including multiple commits - we'll 
 - reactstrap documentation
 
 ### New Concepts Tackled
-- Redux (concept of reducers, dispatch, middleware, promises)
+- Redux (concept of reducers, dispatch, middleware, promises) - haven't worked with React before, learned basic concepts
 - Complex system of Components, Reducers, and Containers
 
 An informal blog was created during construction to document how I was feeling during each stage of creation, methods I tried, and questions I pondered.
 
-I created a few additional 'test' apps to help architecting solutions. These were useful if I wanted to test one component (i.e. the API call).
+I created a few additional 'test' apps to help architecting solutions. These were useful if I wanted to test one component (i.e. the API call). They are located here:
+
 
 ## Task 1 - Implement Responsive Design
 
@@ -67,7 +68,9 @@ The + and - buttons do not have correct functionality at this time either. Still
 
 ## Third Task - Hook Up Product API
 
-I spent a very long time on this task! I was under the impression that it would be better for me to have a class called "ProductApi" that I would call to grab the JSON data. Many of the tutorials I saw online used this method. However, I realized that I was over-complicating things. I decided to just use a simple const called "fetchData" and used the ".fetch" method (which is very useful!). However, my main problem is that I needed to pass the JSON into "products" so that it could get called by getProducts. I was able to get here:
+I spent a very long time on this task! I was under the impression that it would be better for me to have a class called "ProductApi" that I would call to grab the JSON data. OI would then push the JSON data into a file that would add itself to the api folder. I spent some time researching the feasibility of this, but I realized that unlike Java and Ruby, JavaScript doesn't lend itself to creating files locally. I was going to try to use "fs" but that turned out to be a bust. 
+
+However, I realized that I was over-complicating things with my thoughts about creating new classes or creating JSON files locally. I decided to just use a simple const called "fetchData" and used the ".fetch" method (which is very useful!). However, my main problem is that I needed to pass the JSON into "products" so that it could get called by getProducts. I was able to get here:
 
 (from the react-logger on console)
 
@@ -79,6 +82,11 @@ __proto__ :Promise
 
 I can clearly see the array of the Chronograph, Quartz, and Weekender inside the PromiseValue. I'm going to keep trying to extract the PromiseValue somehow. I'm sure there's a way to do it. 
 
-
-
 ### Future Improvements
+
+## Current Isolated Problems - Require Resolution
+### properly implement the Cart Overlay
+- use reactstrap to generate an onClick element that would open the cart with all products within
+
+### get Remove From Cart / Increase Item / Decrease Item to work properly
+### extract the value from the API call so that I can pass it to getProducts
