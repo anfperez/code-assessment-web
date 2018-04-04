@@ -147,11 +147,6 @@ class ProductApi extends React.Component {
     }
 }
 */
-  const fetchData = () => {
-   return fetch('http://tech.work.co/shopping-cart/products.json')
-    .then(results => results.json())
-   // .then(products => products)
-    }
   /*
     fetch('http://tech.work.co/shopping-cart/products.json')
     .then(results => {
@@ -167,10 +162,50 @@ class ProductApi extends React.Component {
     //}
 //I know what I need to do! I need to get the value of Products from inside ProductApi and somehow save it as the value of products!!!!
 
+// (fetchData().then(response => response))
+/*
+const twostep = async () => {
+  return await fetchData()
+}
+*/
+/* suggested on stack overflow
+const fetchData = () => fetch('http://tech.work.co/shopping-cart/products.json').then(results => results.json());
+const delay = timeout => new Promise(resolve => setTimeout(resolve, timeout || TIMEOUT));
 
+//getProducts: timeout => delay(timeout).then(fetchData);
+
+// where you call getProducts, need to do as follows
+/*
+  const fetchData = () => {
+   return fetch('http://tech.work.co/shopping-cart/products.json')
+    .then(results => results.json())
+   // .then(products => products)
+    }
+*/
+
+
+const fetchData = () => {
+   return fetch('endpoint.json')
+    .then(results => results.json())
+    }
+
+/*
+fetchData().then((jsonResults)=> {
+  // put the code surrounding getProducts here
+  getProducts: (cb, timeout) => setTimeout(() => cb({products}), timeout || TIMEOUT)
+  return {
+    getProducts: jsonResults
+  }
+})
+*/
+lets products = await fetchData()
+    return { getProducts: products }
+    
 export default {
 
-  getProducts: (cb, timeout) => setTimeout(() => cb(fetchData().then(response => response)), timeout || TIMEOUT),
+  //getProducts: timeout => delay(timeout).then(fetchData),
 
-  buyProducts: (payload, cb, timeout) => setTimeout(() => cb(), timeout || TIMEOUT),
+ //getProducts: (cb, timeout) => setTimeout(() => cb({products}), timeout || TIMEOUT),
+
+  buyProducts: (payload, cb, timeout) => setTimeout(() => cb(), timeout || TIMEOUT)
 }
