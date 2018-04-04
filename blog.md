@@ -87,12 +87,15 @@ Later ...
 
 Well, I accessed an Object that I need to grab data out of, somehow. I think I need to work on this tomorrow.
 
-4/2/2018
+### 4/2/2018
 
 I tried a lot of methods to extract that information out of the "names" object, which somehow becomes an Object along the way, but an object I can't really get into. It shouldn't be this hard to access data from it. You can currently see my frustrations in a big comment in Cart.js. I think this will have to be something I come back to later. For now, at least I can access the array of info, so that should lead to something.
 
 Also, the "Items in Cart" updates, but not for each individual item :/
 
+### 4/4/2018
+
+So, I'm going to try serialize the names array instead. I believe serializing might be a better way to go about things than JSON.stringify...might produce more of the result that I need.
 
 ## Second Task
 2. Enhance Cart Functionality
@@ -121,7 +124,7 @@ constants/ActionTypes.js
 reducers/cart.js
 reducers/product.js
 
-4/1
+### 4/1
 
 Still trying to figure out remove_from_cart. I'm going to take a deep dive into add_to_cart to see how it works, where it's connected, etc.
 
@@ -220,3 +223,7 @@ Okay I know what I need to do, I need to get the value of products from inside P
 Later ...
 
 after a long while, I realized that my API call does not have to be initialized with a class at all! I was over complicating things. I took a step back and decided to just make a constant that would perform the API call. I think things are way easier this way, especially using fetch. Still haven't been able to get it work correctly, though.
+
+4/3/18
+
+Honestly, it's a bit maddening that I can't figure out how to access the data in [[PromiseValue]]. I'm going to keep looking into it, but for now I'm going to clear my head and go back to some of the issues I was having with displaying the item name and correct quantities in the cart.

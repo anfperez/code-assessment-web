@@ -20,7 +20,7 @@ const addedIds = (state = initialState.addedIds, action) => {
       return [ ...state, action.productId ]
       //I'm going to need to add a button that links back to REMOVE_FROM_CART. further investigation is needed...
     case REMOVE_FROM_CART:
-        console.log("removed ADD");
+        console.log("removed from cart");
 
         return state.filter(id => id !== action.productId);
       //return [ ...state.slice(0,state.indexOf(action.productId),
@@ -31,6 +31,7 @@ const addedIds = (state = initialState.addedIds, action) => {
   }
 }
 
+//I wrote this function so that I could grab the names of each item and log into the cart once it gets selected
 const addedNames = (state = initialState.addedIds, action) => {
   switch (action.type) {
     case ADD_TO_CART:

@@ -13,8 +13,10 @@ const shoppingCartmessage = {
 
 //this controls the way the products look when they get placed inside the cart
 const Cart  = ({ products, total, names, removeFromCart, onCheckoutClicked, onRemoveFromCartClicked }) => {
-  //const a = JSON.stringify(names[0].title
-  /* the following is my practice code, trying to extract the "title" from the names object/array I created. I have not yet been able to achieve this. maybe in a few more days 
+
+  /* --- the below code was my attempt to get the "names" array to work. It's only passing an empty array to Cart
+  const a = JSON.stringify(names[0].title
+
   let a = JSON.stringify(names[0])
   let b = typeof (JSON.stringify(names[0]))
   console.log(b)
@@ -60,6 +62,7 @@ const Cart  = ({ products, total, names, removeFromCart, onCheckoutClicked, onRe
   ) : (
   <div>
     <p style={shoppingCartmessage}><em>Your Shopping Cart is empty.</em></p>
+     console.log({names})
     </div>
   )
 
@@ -68,7 +71,7 @@ const Cart  = ({ products, total, names, removeFromCart, onCheckoutClicked, onRe
       <h3>Your Cart</h3>
       <div>{nodes}</div> 
       <p> Items: { JSON.stringify(names) } </p>
-      <p> Total Items in Cart: {names.length } </p>
+      <p> Total Items in Cart: {names.length} </p>
       <p>Total: &#36;{ total}</p>
       <Button color="secondary" onClick={onCheckoutClicked}
         disabled={hasProducts ? '' : 'disabled'}>

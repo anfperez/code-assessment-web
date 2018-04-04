@@ -20,11 +20,12 @@ const CartContainer = ({ products, productName, total, checkout, removeFromCart,
         />
       ))}
     </ProductsList>
+    { (() => console.log(names)) () }
     <Cart
       products={products}
      // productName={products.title}
       total={total}
-      names={ names}
+      names={ names }
       onCheckoutClicked={() => checkout(products)}
     />
   </div>

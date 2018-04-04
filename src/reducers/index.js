@@ -26,8 +26,10 @@ export const getCartProducts = state =>
     quantity: getQuantity(state, id)
   }))
 
+//this function is supposed to return the names of the products added to the cart
 export const listProductNames = state =>
   getAddedIds(state).map(id => ({
     ...getProduct(state, id),
-    names: getAddedNames(state, id)
+    //names: (getAddedNames(state, id)[1].value),
+    names: (getAddedNames(state, id))
   }))
