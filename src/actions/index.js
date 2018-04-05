@@ -24,6 +24,7 @@ const addToCartUnsafe = productId => ({
   productId
 })
 
+//the following functions were made to match addtoCartUnsafe, but full functionality wasn't implemented yet
 const removeFromCartUnsafe = productId => ({
   type: types.REMOVE_FROM_CART,
   productId
@@ -47,7 +48,7 @@ export const addToCart = productId => (dispatch, getState) => {
   }
 }
 
-//I need to somehow tell this function to remove an item from the cart
+//I need to somehow tell this function to remove an item from the cart (properly)
 export const removeFromCart = productId => (dispatch, getState) => {
    console.log('removeFromCart was clicked')
   if (getState().cart.quantityById[productId] > 0) {
@@ -55,6 +56,7 @@ export const removeFromCart = productId => (dispatch, getState) => {
   }
 }
 
+//not working yet
 export const increaseQuantity = productId => (dispatch, getState) => {
   if(getState().cart.quantityById[productId] > 0 ) {
     console.log('increaseQuantity was clicked')
@@ -62,6 +64,7 @@ export const increaseQuantity = productId => (dispatch, getState) => {
   }
 }
 
+//not working yet
 export const decreaseQuantity = productId => (dispatch, getState) => {
   if(getState().cart.quantityById[productId] > 0 ) {
     console.log('decreaseQuantity was clicked')

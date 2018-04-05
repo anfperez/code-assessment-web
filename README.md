@@ -86,7 +86,16 @@ I can clearly see the array of the Chronograph, Quartz, and Weekender inside the
 
 ## Current Isolated Problems - Require Resolution
 ### properly implement the Cart Overlay
-- use reactstrap to generate an onClick element that would open the cart with all products within
+- use reactstrap to generate an onClick element that would open the cart with all products within. Currently stuck at "products.length" being undefined when I push the "View Cart" button.
 
 ### get Remove From Cart / Increase Item / Decrease Item to work properly
+- removeFromCart is doing some silly things. Increase and Decrease Item buttons are not working properly yet.
+
 ### extract the value from the API call so that I can pass it to getProducts
+- for now, all I have is that [[PromiseValue]]: Array(3) result. I need to figure out how I can get that to work. I am thinking that a deeper understanding of Promises is involved.
+
+### Challenges
+
+This was a very challenging project for me to tackle. I have been doing small/basic programs in React.js, but I have never worked with Redux. I read documentation and watched tutorials on Redux, but I think that the best way for me to understand Redux is to just read over the code until I really understand how it works.
+
+I feel like it would have been easier for me to make a Shopping Cart from scratch! But in the real world, that is rarely the case -- usually engineers find themselves working on apps written years ago by other people. So it's important for engineers to be flexible and learn on the fly. If I had more time (a week perhaps) I feel like I would have been able to get more functionality to work. Until then, I am somewhat proud of how far I got. I was also working full-time during this week so I feel that if I had more hours during the day, I would have gotten farther.

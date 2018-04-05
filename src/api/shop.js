@@ -18,16 +18,10 @@ const fetchData = () => {
    return fetch('http://tech.work.co/shopping-cart/products.json')
     .then(results => results.json())
     }
-/*
-export default {
 
-  getProducts: (cb, timeout) => setTimeout(() => cb(fetchData().then(response => response)), timeout || TIMEOUT),
+//Below you'll find my various and long-winded attempts to get the api call to work within a class, which was extremely annoying and taught me that not every component has to be a class
 
-  buyProducts: (payload, cb, timeout) => setTimeout(() => cb(), timeout || TIMEOUT)
-}
 /* ---- this was my attempt at constructing a class which would fetch the api data and push it to any array ----
-
-
 
 let products;
 class ProductApi extends React.Component {

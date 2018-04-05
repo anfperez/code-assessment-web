@@ -97,6 +97,22 @@ Also, the "Items in Cart" updates, but not for each individual item :/
 
 So, I'm going to try serialize the names array instead. I believe serializing might be a better way to go about things than JSON.stringify...might produce more of the result that I need.
 
+### 4/5/2018
+
+Today I decided that I would attempt to approximate the Cart Overlay. I'm not completely sure if an Overlay is the best strategy here, but I'll try it anyway. The one thing I've noticed from working on this assignment is how there aren't many actual classes, i.e. (class myClass extends React.Component). This is a bit contrary to what I've been learning in basic React, which is that everything should be contained in classes. But the majority of the components and containers are variables, which I find pretty cool. Will need to research which is better to use when.
+
+Later...
+
+Still trying to get the Overlay to work. I think I *sorta* have it...I am wondering why one of my boolean values isn't becoming "true" upon click.
+
+Later...
+
+I was able to get the boolean to work, but now whenever I click on "Show Cart", it just goes to a blank screen. The error reads TypeError: Cannot read property 'length' of undefined" and says that "products" in Cart.js has now become undefined. There must be something I'm missing in the OverlayContainer.
+
+Later...
+
+Since I made a new component, even if I can't exactly get it to be functional at the moment, I decided to try my hand at writing a test for it. Doing some research on 'enyzme', 'shallow', and 'jest'. I will structure this test class based on the other classes. 
+
 ## Second Task
 2. Enhance Cart Functionality
 * "add to cart", "update cart"

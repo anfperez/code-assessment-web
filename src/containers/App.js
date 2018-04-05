@@ -2,6 +2,8 @@ import React from 'react'
 import ProductsContainer from './ProductsContainer'
 import CartContainer from './CartContainer'
 import { Container, Row, Col } from 'reactstrap'
+import OverlayContainer from './OverlayContainer'
+// import ViewCart from './OverlayContainer'
 
 const appStyle = {
     backgroundColor: 'WhiteSmoke',
@@ -16,7 +18,7 @@ const App = () => (
                 <h2>Acme Store</h2>
             </Col>
             <Col> 
-                <CartContainer />
+                <OverlayContainer />
             </Col>
         </Row>
     </Container>

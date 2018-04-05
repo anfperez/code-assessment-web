@@ -7,7 +7,6 @@ import Cart from '../components/Cart'
 import ProductItem from '../components/ProductItem'
 import ProductsList from '../components/ProductsList'
 
-//still need to write function that will remove items from the cart
 const CartContainer = ({ products, productName, total, checkout, removeFromCart, names
 }) => (
   <div>
@@ -20,7 +19,6 @@ const CartContainer = ({ products, productName, total, checkout, removeFromCart,
         />
       ))}
     </ProductsList>
-    { (() => console.log(names)) () }
     <Cart
       products={products}
      // productName={products.title}
@@ -49,12 +47,12 @@ const mapStateToProps = (state) => ({
   names: listProductNames(state)
 })
 
-/*
+
 const mapDispatchToProps = (dispatch) => {
   return {
     removeFromCart: product => dispatch(removeFromCart(product)),
   }
 }
-*/
+
 export default connect(
   mapStateToProps, { checkout, removeFromCart })(CartContainer);
