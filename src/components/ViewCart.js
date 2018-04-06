@@ -1,7 +1,9 @@
 import React from 'react';
 import Cart from './Cart';
 
-//I created this class as a Button that, when clicked, would generate the CartOverlay which would contain the cart. I need to figure out why "products" isn't being passed correctly to Cart.js
+//I created this class as a Button that, when clicked, would generate the CartOverlay which would contain the cart. 
+// I need to figure out why "products" isn't being passed correctly to Cart.js
+
 export default class ViewCart extends React.Component {
   constructor(props) {
     super(props);

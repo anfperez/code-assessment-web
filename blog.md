@@ -1,6 +1,6 @@
 Test change
 
-#Blog - Angela's Thoughts on the Code Assignment
+# Blog - Angela's Thoughts on the Code Assignment
 
 Thanks for giving me the opportunity to challenge myself. I am a very visual learner. I do very well from watching code tutorials on Youtube or reading through written walkthroughs on how to do a particular task. I always believe that if I can't solve something on my own, there will always be an answer, somehow.
 
@@ -28,33 +28,31 @@ answer: npm install ajv@^6.0.0
 
 ### 3/30/18
 On this first assignment, I decided to use Media Queries in css to make the app responsive. I decided to tackle this one first since it would help me get to know the code.
-* npm install react-responsive
-
-in index.js: const mediaQuery = require('react-responsive');
+* npm install react-responsive in index.js: const mediaQuery = require('react-responsive');
 Switched color to JavaScript (Babel) to assist. Created new React class, ResponsiveField, to assist with responsive design
 
 After a lot of fiddling around, I realize that it may be easier to place media queries inside a css stylsheet. or maybe I will need to pass down each state as a prop. I'll do more research, read some more tutorials and watch more videos in the meantime.
 
 Later...
 
-Had some free time today so I watched a Youtube tutorial that explained media queries. I felt i needed to understand them on a simpler level before trying to implement.
+Had some free time today so I watched a Youtube tutorial that explained media queries. I felt I needed to understand them on a simpler level before trying to implement.
 
 Pushed a very simple repo to git with my media query practice. https://github.com/anfperez/Practicing_Media_Queries
-this is just very simple html and css though, so I'm not sure if it will work in a react app. I may try to create a simple react app and implement media queries there before attempting it in the main app.
+-- this is just very simple html and css though, so I'm not sure if it will work in a React app. I may try to create a simple React app and implement media queries there before attempting it in the main app.
 
 Decided to create a simple React app: https://github.com/facebook/create-react-app. This is actually new for me -- I'd been practicing React with Webpack and Babel so not having to configure that is pretty cool.
 
-Hm! I guess the issue with using create-react-app is that is already install the responsiveness in for you. But the code test, we need to work with what we have there. So maybe I'll install a more simple react app. 
+Hm! I guess the issue with using create-react-app is that it already installs the responsiveness in for you. But the code test, we need to work with what we have there. So maybe I'll install a more simple zreact app. 
 
-Decided not use mxiins...
+Decided not use mixins...
 
-okay, was able to successfully get my regular react app (rock-paper-scissors clone) to scale. Will test on different devices.
+Okay, was able to successfully get my regular react app (rock-paper-scissors clone) to scale. Will test on different devices.
 
-Fooled around with some really crappy looking divs. I think I've got the hang of things now -- maybe! We will see if the media queries will work better inside the CSS file than if I tried to implement as a class/variable using react-responsive. I made these changes in the ReactJS_Project I have up on GitHub
+Fooled around with some really crappy looking divs. I think I've got the hang of things now -- maybe! We will see if the media queries will work better inside the CSS file than if I tried to implement as a class/variable using react-responsive. I made these changes in the ReactJS_Project I have up on GitHub.
 
 Later...
 
-I'm starting to think that maybe implementing Bootstrap is the best way to solve this, and maybe leave Media Queries for another time. Plus it would be a good way to practice Bootstrap. let's investigate this line of thinking further.
+I'm starting to think that maybe implementing Bootstrap is the best way to solve this, and maybe leave Media Queries for another time. Plus it would be a good way to practice Bootstrap. Let's investigate this line of thinking further.
 
 installed react-bootstrap, bootstrap, jquery, and popper
 
@@ -73,7 +71,7 @@ Okay, this seems to work better than using react-bootstrap for now. Let's see ho
 
 Later...
 
-Spent a lot of time trying to get the Cart Overlay to work. I did get some sort of Overlay to work, but it looks wonky. I think I'm going to try to work on the Remove_From_Cart method for a bit to clear my head.
+Spent a lot of time trying to get the Cart Overlay to work. I did get some sort of Overlay to work, but it looks wonky. I think I'm going to try to work on the removeFromCart method for a bit to clear my head.
 
 Later ...
 
@@ -89,9 +87,9 @@ Well, I accessed an Object that I need to grab data out of, somehow. I think I n
 
 ### 4/2/2018
 
-I tried a lot of methods to extract that information out of the "names" object, which somehow becomes an Object along the way, but an object I can't really get into. It shouldn't be this hard to access data from it. You can currently see my frustrations in a big comment in Cart.js. I think this will have to be something I come back to later. For now, at least I can access the array of info, so that should lead to something.
+I tried a lot of methods to extract that information out of the "names" object, which somehow becomes an Object along the way, but an Object I can't really get into. It shouldn't be this hard to access data from it. You can currently see my frustrations in a big comment in Cart.js. I think this will have to be something I come back to later. For now, at least I can access the array of info, so that should lead to something.
 
-Also, the "Items in Cart" updates, but not for each individual item :/
+Also, the "Items in Cart" updates, but not for each individual item, only for the category of each item added.
 
 ### 4/4/2018
 
@@ -99,7 +97,7 @@ So, I'm going to try serialize the names array instead. I believe serializing mi
 
 ### 4/5/2018
 
-Today I decided that I would attempt to approximate the Cart Overlay. I'm not completely sure if an Overlay is the best strategy here, but I'll try it anyway. The one thing I've noticed from working on this assignment is how there aren't many actual classes, i.e. (class myClass extends React.Component). This is a bit contrary to what I've been learning in basic React, which is that everything should be contained in classes. But the majority of the components and containers are variables, which I find pretty cool. Will need to research which is better to use when.
+Today I decided that I would attempt to approximate the Cart Overlay. I'm not completely sure if an Overlay is the best strategy here, but I'll try it anyway. The one thing I've noticed from working on this assignment is how there aren't many actual classes, i.e. (class myClass extends React.Component). This is a bit contrary to what I've been learning in basic React, which is that most elements should be contained in classes. But the majority of the components and containers are variables, which I find pretty cool. Will need to research which is better to use when.
 
 Later...
 
@@ -115,7 +113,7 @@ Since I made a new component, even if I can't exactly get it to be functional at
 
 Later...
 
-I feel that I have a much better grasp on understanding Jest and Enzyme now. I've written test units before, most recently using JUnit in Java. So tests make a lot of sense to me, especially tests as simple as these.
+I feel that I have a much better grasp on understanding Jest and Enzyme now. I've written test units before, most recently using JUnit in Java. So tests make a lot of sense to me, especially tests as simple as these. I wrote a very simple test in ViewCart.js
 
 ## Second Task
 2. Enhance Cart Functionality
@@ -144,7 +142,7 @@ constants/ActionTypes.js
 reducers/cart.js
 reducers/product.js
 
-### 4/1
+### 4/1/2018
 
 Still trying to figure out remove_from_cart. I'm going to take a deep dive into add_to_cart to see how it works, where it's connected, etc.
 
@@ -162,7 +160,7 @@ Later...
 
 OKAY! I finally got a remove button to work! Not exactly in the way I'd want to, just yet. But at least I got a button to work at all. I watched a lot of Redux tutorials and read more articles about Redux, dispatches, stores, how everything works. So I'm happy a version of the Remove button is working. Still needs some work but at least there was progress!
 
-What I did was make it so that when an item is added to the cart, a small Card pops up with a remove button next to it. I understand this isn't ideal because the remove button is also present in the ProductsList too. I might need to find a way to disable the button there.
+What I did, was make it so that when an item is added to the cart, a small Card pops up with a remove button next to it. I understand this isn't ideal because the remove button is also present in the ProductsList too. I might need to find a way to disable the button there.
 
 I think I need to step back from this particular task right now, and work on a few different things to clear my head. I may try to get the API call to work correctly.
 
@@ -180,7 +178,7 @@ Added + or - buttons in preparation for this. Let's see if I can successfully fi
 
 ### 4/5/2018 
 
-FINALLY got removeFromCart to work! I had to pass the product.id to removeFromCart to get it to work! I made a ton of progress by basically a lot of research and watching more tutorials. 
+FINALLY got removeFromCart to work! I had to pass the product.id to removeFromCart to get it to work! I made a ton of progress by basically a lot of research and watching more tutorials. I wanted to hand this in by tomorrow so I did a big push for tonight.
 
 ## Third task
 
@@ -190,7 +188,7 @@ Products from the API will replace the static products
 
 After some trial and error, I was able to grab the API from the endpoint!
 
-So I was able to call the API using the method I learned. But for some reason the items display three times each, for a total of nine items! I did some sidework with another api and got that one to display properly. So there must be another thing in the code I need to alter to make it not display 3 times. I think I may try to tackle responsiveness first.
+So I was able to call the API using the method I learned. But for some reason the items display three times each, for a total of nine items! I did some sidework with another API in a side application. and got that one to display properly. So there must be another thing in the code I need to alter to make it not display 3 times. I think I may try to tackle responsiveness first.
 
 ### 4/1/18
 
@@ -198,19 +196,19 @@ Going to do some practice calls in Redux so I can get used to it.
 
 Later...
 
-Tried a practice app! But my head is a bit mush so I'm going to go back to the remove/update task to see how I can implement that.
+Tried a practice app! I'm going to go back to the remove/update task to see how I can implement that.
 
 ### 4/2/18
 
 What I think I need to do is the following
--get JSON data from website
--write JSON to a file in /api
--replace "_products" in api/shop.js with the new file_
+- get JSON data from website
+- write JSON to a file in /api
+- replace "_products_" in api/shop.js with the new file
 And everytime the page reloads, or the data in the API changes, a new file will regenerate
 
 Later ...
 
-after some brief investigation, I realized that Node.js is a server-side language and I therefore cannot save to file with it. So, I'm going to need to find another solution for all this.
+After some brief investigation, I realized that Node.js is a server-side language and I therefore cannot save to file with it. So, I'm going to need to find another solution for all this.
 
 Later...
 
@@ -230,23 +228,23 @@ Learned a lot more about how the Array.reduce method works! So now I'm going to 
 
 Had a strange breakthrough. Earlier I was doing this to look at what the JSON data looked like, in console.
 
-console.log("products looks like" + products);
+`console.log("products looks like" + products);`
 
 And it was giving me: [Object object] 3 times
 
 But later, I wrote
 
-console.log(products)
+`console.log(products)`
 
 And it gave me the actual product array!! So it seems that I can't output products with any string, it will just give me a weird Object object syntax.
 
-So the difference here is, when the static JSON file passes its data shop.js, it's passing an array. When I try to extract the data from the API, I end up passing like...an array of arrays. It comes out as 'products:products{ data}'. Weird. need to figure out why this is happening so that reduce can work properly.
+So the difference here is, when the static JSON file passes its data to shop.js, it's passing an array. When I try to extract the data from the API, I end up passing like...an array of arrays. It comes out as 'products:products{ data}'. Weird. need to figure out why this is happening so that reduce can work properly.
 
-Okay I know what I need to do, I need to get the value of products from inside ProductApi and append it to the products array I initialized before! How can I do this!!!
+Okay I know what I need to do, I need to get the value of products from inside ProductApi and append it to the products array I initialized before! How can I do this!!! (Update: ProductApi was a class which was eventually deprecated in favor of a more simple API call.)
 
 Later ...
 
-after a long while, I realized that my API call does not have to be initialized with a class at all! I was over complicating things. I took a step back and decided to just make a constant that would perform the API call. I think things are way easier this way, especially using fetch. Still haven't been able to get it work correctly, though.
+After a long while, I realized that my API call does not have to be initialized with a class at all! I was over complicating things. I took a step back and decided to just make a constant that would perform the API call. I think things are way easier this way, especially using fetch. Still haven't been able to get it work correctly, though.
 
 4/3/18
 

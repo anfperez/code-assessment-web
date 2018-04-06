@@ -14,6 +14,7 @@ export default {
   buyProducts: (payload, cb, timeout) => setTimeout(() => cb(), timeout || TIMEOUT)
 }
 
+//simple API call that fetches the JSON data
 const fetchData = () => {
    return fetch('http://tech.work.co/shopping-cart/products.json')
     .then(results => results.json())

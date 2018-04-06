@@ -19,6 +19,7 @@ const products = (state, action) => {
         ...state,
         inventory: state.inventory + 1
       }
+    // wasn't able to get this functionality to work
     case INCREASE_QUANTITY:
       console.log('quantity increased')
       return {

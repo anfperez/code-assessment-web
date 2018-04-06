@@ -8,6 +8,7 @@ import ProductsList from '../components/ProductsList'
 import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
 
+//added IncreaseQuantity and DecreaseQuantity buttons to 
 const ProductsContainer = ({ products, addToCart, increaseQuantity, decreaseQuantity }) => (
   <ProductsList title="Products">
     {products.map(product =>

@@ -8,6 +8,8 @@ import ProductItem from '../components/ProductItem'
 import ProductsList from '../components/ProductsList'
 import ViewCart from '../components/ViewCart'
 
+//this is the overlay container class that will eventually contain the cart overlay
+// wasn't able to get it to work properly.
 const OverlayContainer = ({products, productName, total, checkout, removeFromCart, names 
 }) => (
   <div>
@@ -75,47 +77,7 @@ const overlayContainerStyle = {
     alignItems: 'center',
     justifyContent: 'center'
 }
-/*
-class ViewCart extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { showCart: false }
-    this.handleClick = this.handleClick.bind(this);
-  }
 
-  handleClick() {
-    this.setState({showCart: true})
-    console.log("button clicked")
-    
-  }
-  render() { 
-    return (
-      <div> 
-      <button onClick={this.handleClick}> Show Cart 
-        {this.state.showCart ? <Cart />: null }
-        </button>
-
-        </div>
-        );
-  }
-}
-  /*
-  getInitialState() {
-    return { showCart: false}
-  onClick() {
-    this.setState({ showCart: true})
-  },
-  
-  render() {
-    return (
-      <div>
-        <button onClick={this.handleClick}> Show Cart </button>
-        { this.state.showCart ? <OverlayContainer />: null }
-        </div>
-      )
-  }
-}
-*/
 const mapStateToProps = (state) => ({
   products: getCartProducts(state),
   total: getTotal(state),
