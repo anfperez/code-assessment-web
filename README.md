@@ -75,11 +75,11 @@ However, I realized that I was over-complicating things with my thoughts about c
 
 (from the react-logger on console)
 
-action {type: "RECEIVE_PRODUCTS", products: Promise}
+`action {type: "RECEIVE_PRODUCTS", products: Promise}
 products: Promise
 __proto__ :Promise
 [[PromiseStatus]] :"resolved"
-[[PromiseValue]]: Array(3)
+[[PromiseValue]]: Array(3)`
 
 I can clearly see the array of the Chronograph, Quartz, and Weekender inside the PromiseValue. I'm going to keep trying to extract the PromiseValue somehow. I'm sure there's a way to do it. 
 
