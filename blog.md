@@ -113,6 +113,10 @@ Later...
 
 Since I made a new component, even if I can't exactly get it to be functional at the moment, I decided to try my hand at writing a test for it. Doing some research on 'enyzme', 'shallow', and 'jest'. I will structure this test class based on the other classes. 
 
+Later...
+
+I feel that I have a much better grasp on understanding Jest and Enzyme now. I've written test units before, most recently using JUnit in Java. So tests make a lot of sense to me, especially tests as simple as these.
+
 ## Second Task
 2. Enhance Cart Functionality
 * "add to cart", "update cart"
