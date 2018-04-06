@@ -102,25 +102,25 @@ This was a very challenging project for me to tackle. I have been doing small/ba
 
 I feel like it would have been easier for me to make a Shopping Cart from scratch! But in the real world, that is rarely the case -- usually engineers find themselves working on apps written years ago by other people. So it's important for engineers to be flexible and learn on the fly. If I had more time (a week perhaps) I feel like I would have been able to get more functionality to work. Until then, I am somewhat proud of how far I got. I was also working full-time during this week so I feel that if I had more hours during the day, I would have gotten farther.
 
-## Progression of the Shopping Cart
+### Progression of the Shopping Cart
 
-First Version - basic Shopping Cart 
+First Version - basic Shopping Cart <br />
 ![first_version](https://github.com/anfperez/code-assessment-web/blob/master/assets/screenshot_1.png)
 
-Second Version - styled with reactstrap
+Second Version - styled with reactstrap <br />
 ![second_version](https://github.com/anfperez/code-assessment-web/blob/master/assets/screenshot_2.png)
 
-Third Version - able to add cards to the cart
+Third Version - able to add cards to the cart <br />
 ![third_version](https://github.com/anfperez/code-assessment-web/blob/master/assets/screenshot_3.png)
 
-Fourth Version - added remove button to the cart
+Fourth Version - added remove button to the cart <br />
 ![fourth_version](https://github.com/anfperez/code-assessment-web/blob/master/assets/screenshot_4.png)
 
-Fifth Version - logging "Object object" to the cart
+Fifth Version - logging "Object object" to the cart <br />
 ![fifth_version](https://github.com/anfperez/code-assessment-web/blob/master/assets/screenshot_5.png)
 
-Sixth Version - logging the objects in the array
+Sixth Version - logging the objects in the array <br />
 ![sixth_version](https://github.com/anfperez/code-assessment-web/blob/master/assets/screenshot_6.png)
 
-Seventh Version - adding cleaner card with removeFromCart button
+Seventh Version - adding cleaner card with removeFromCart button <br />
 ![seventh_version](https://github.com/anfperez/code-assessment-web/blob/master/assets/screenshot_7.png)
