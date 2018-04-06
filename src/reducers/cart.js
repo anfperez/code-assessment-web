@@ -32,10 +32,12 @@ const addedIds = (state = initialState.addedIds, action) => {
 }
 
 //I wrote this function so that I could grab the names of each item and log into the cart once it gets selected
-const addedNames = (state = initialState.addedIds, action) => {
+const addedNames = (state = initialState.addedNames, action) => {
+  console.log("initialstate", initialState)
   switch (action.type) {
     case ADD_TO_CART:
       if (state.indexOf(action.productId) !== -1 ) {
+        console.log("state ", state)
         return state
       }
       return [ ...state, action.productTitle]
@@ -55,13 +57,7 @@ const quantityById = (state = initialState.quantityById, action) => {
     case REMOVE_FROM_CART:
       return { ...state, [action.productId]: state[action.productId] - 1 }; //
      /* 
-     const { productId2 } = action
-      return { ...state,
-        [productId]: (state[productId] || 0) + 2 
-      }
-      /*
-      console.log("removed ADD");
-      
+      --- tried putting this down earlier, but this didn't work --- 
       return { ...state.slice(0,state.indexOf(action.productId),
           ...state.slice(state.indexOf(action.productId)+1)) }
           */
@@ -75,7 +71,7 @@ export const getQuantity = (state, productId) =>
 
 export const getAddedIds = state => state.addedIds
 
-export const getAddedNames = state => state.addedNames
+export const getAddedNames = state => state.addedIds
 
 const cart = (state = initialState, action) => {
   switch (action.type) {
@@ -87,7 +83,7 @@ const cart = (state = initialState, action) => {
       return {
         addedIds: addedIds(state.addedIds, action),
         quantityById: quantityById(state.quantityById, action),
-        addedNames: addedNames(state.addedNames, action)
+        //addedNames: addedNames(state.addedNames, action)
       }
   }
 }

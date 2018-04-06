@@ -29,7 +29,7 @@ const ProductItem = ({product, onAddToCartClicked, onRemoveFromCartClicked, onIn
       disabled={product.inventory > 0 ? '' : 'disabled'}> +
     </Button>
     <Button color="danger"
-      onclick={onDecreaseQuantityClicked} 
+      onClick={onDecreaseQuantityClicked} 
       disabled={product.inventory > 0 ? '' : 'disabled'}> - 
       </Button>
 

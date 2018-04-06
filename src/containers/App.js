@@ -18,7 +18,7 @@ const App = () => (
                 <h2>Acme Store</h2>
             </Col>
             <Col> 
-                <OverlayContainer />
+                <CartContainer />
             </Col>
         </Row>
     </Container>

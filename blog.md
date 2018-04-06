@@ -178,6 +178,10 @@ actions/index.js
 
 Added + or - buttons in preparation for this. Let's see if I can successfully figure out how to do this.
 
+### 4/5/2018 
+
+FINALLY got removeFromCart to work! I had to pass the product.id to removeFromCart to get it to work! I made a ton of progress by basically a lot of research and watching more tutorials. 
+
 ## Third task
 
 Products from the API will replace the static products

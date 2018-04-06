@@ -2,28 +2,34 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { checkout, removeFromCart } from '../actions'
-import { getTotal, getCartProducts, listProductNames } from '../reducers'
+import cart, { getTotal, getCartProducts, listProductNames } from '../reducers'
 import Cart from '../components/Cart'
 import ProductItem from '../components/ProductItem'
 import ProductsList from '../components/ProductsList'
+import { Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button } from 'reactstrap';
 
-const CartContainer = ({ products, productName, total, checkout, removeFromCart, names
+//finally got this to work! I needed to pass the product id in here
+      // I also totally redid this section so that it's not the entire ProductsList that returns, just a card
+const CartContainer = ({ products, productName, total, checkout, removeFromCart, names, quantity
 }) => (
   <div>
     <ProductsList>
       {products.map(product => (
-        <ProductItem
-          key={product.id}
-          product={product}
-          onRemoveFromCartClicked={() => removeFromCart(product.id)}
-        />
+        <Card>
+          <CardBody>
+          {product.title}
+      {product.price} + " " + {product.inventory}
+      <button onClick={ () => removeFromCart(product.id) }>Remove</button>
+          </CardBody>
+          </Card>
       ))}
     </ProductsList>
     <Cart
       products={products}
-     // productName={products.title}
       total={total}
       names={ names }
+      quantity = { quantity }
       onCheckoutClicked={() => checkout(products)}
     />
   </div>
@@ -41,11 +47,19 @@ CartContainer.propTypes = {
   removeFromCart: PropTypes.func.isRequired
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state) => {
+  console.log('state in mapStateToProps', state)
+  const sumValues = obj => Object.values(obj).reduce((a, b) => {
+   return a + b
+ }, 0);
+
+  return ({
   products: getCartProducts(state),
   total: getTotal(state),
-  names: listProductNames(state)
+  names: listProductNames(state),
+  quantity: sumValues(state.cart.quantityById)
 })
+}
 
 
 const mapDispatchToProps = (dispatch) => {

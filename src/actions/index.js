@@ -2,12 +2,6 @@ import shop from '../api/shop'
 import * as types from '../constants/ActionTypes'
 import React from 'react'
 
-/*
-shop.getProducts(100) // 100ms timeout
-.then(data => {
-    // here, data is the JSON you are looking for
-});
-*/
 const receiveProducts = products => ({
   type: types.RECEIVE_PRODUCTS,
   products: products

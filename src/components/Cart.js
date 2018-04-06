@@ -12,8 +12,10 @@ const shoppingCartmessage = {
 }
 
 //this controls the way the products look when they get placed inside the cart
-const Cart  = ({ products, total, names, removeFromCart, onCheckoutClicked, onRemoveFromCartClicked }) => {
-
+const Cart  = ({ products, total, names, removeFromCart, onCheckoutClicked, onRemoveFromCartClicked, quantity, ...props,  }) => {
+  console.log("products", products)
+  console.log("names", names)
+  console.log("quantity", quantity)
   /* --- the below code was my attempt to get the "names" array to work. It's only passing an empty array to Cart. As of 4/5, I'm still trying to get it to work.
   const a = JSON.stringify(names[0].title
 
@@ -50,6 +52,7 @@ const Cart  = ({ products, total, names, removeFromCart, onCheckoutClicked, onRe
  // console.loc(c)
  */
   const hasProducts = products.length > 0
+  console.log("props", props)
   console.log(hasProducts)
   const nodes = hasProducts ? (
     products.map(product =>
@@ -70,8 +73,8 @@ const Cart  = ({ products, total, names, removeFromCart, onCheckoutClicked, onRe
     <div>
       <div>{nodes}</div> 
       <p> Items: { JSON.stringify(names) } </p>
-      <p> Total Items in Cart: {names.length} </p>
-      <p>Total: &#36;{ total}</p>
+      <p> Total Items in Cart: {quantity} </p>
+      <p>Total: &#36;{ total }</p>
       <Button color="secondary" onClick={onCheckoutClicked}
         disabled={hasProducts ? '' : 'disabled'}>
         Checkout
