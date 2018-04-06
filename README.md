@@ -125,3 +125,6 @@ Sixth Version - logging the objects in the array <br />
 
 Seventh Version - adding cleaner card with removeFromCart button <br />
 ![seventh_version](https://github.com/anfperez/code-assessment-web/blob/master/assets/screenshot_7.png)
+
+Eighth Version - able to show quantity of separate items in cart <br />
+![eighth_version](https://github.com/anfperez/code-assessment-web/blob/master/assets/screenshot_8.png)
