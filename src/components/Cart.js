@@ -72,9 +72,8 @@ const Cart  = ({ products, total, names, removeFromCart, onCheckoutClicked, onRe
   return (
     <div>
       <div>{nodes}</div> 
-      <p> Items: { JSON.stringify(names) } </p>
       <p> Total Items in Cart: {quantity} </p>
-      <p>Total: &#36;{ total }</p>
+      <p>Total: ${ total }</p>
       <Button color="secondary" onClick={onCheckoutClicked}
         disabled={hasProducts ? '' : 'disabled'}>
         Checkout
