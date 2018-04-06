@@ -122,4 +122,5 @@ Fifth Version - logging "Object object" to the cart
 Sixth Version - logging the objects in the array
 ![sixth_version](https://github.com/anfperez/code-assessment-web/blob/master/assets/screenshot_6.png)
 
-Seventh Version - 
+Seventh Version - adding cleaner card with removeFromCart button
+![seventh_version](https://github.com/anfperez/code-assessment-web/blob/master/assets/screenshot_7.png)
