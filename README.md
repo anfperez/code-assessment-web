@@ -101,3 +101,25 @@ I can clearly see the array of the Chronograph, Quartz, and Weekender inside the
 This was a very challenging project for me to tackle. I have been doing small/basic programs in React.js, but I have never worked with Redux. I read documentation and watched tutorials on Redux, but I think that the best way for me to understand Redux is to just read over the code until I really understand how it works.
 
 I feel like it would have been easier for me to make a Shopping Cart from scratch! But in the real world, that is rarely the case -- usually engineers find themselves working on apps written years ago by other people. So it's important for engineers to be flexible and learn on the fly. If I had more time (a week perhaps) I feel like I would have been able to get more functionality to work. Until then, I am somewhat proud of how far I got. I was also working full-time during this week so I feel that if I had more hours during the day, I would have gotten farther.
+
+## Progression of the Shopping Cart
+
+First Version - basic Shopping Cart 
+![first_version](https://github.com/anfperez/code-assessment-web/blob/master/assets/screenshot_1.png)
+
+Second Version - styled with reactstrap
+![second_version](https://github.com/anfperez/code-assessment-web/blob/master/assets/screenshot_2.png)
+
+Third Version - able to add cards to the cart
+![third_version](https://github.com/anfperez/code-assessment-web/blob/master/assets/screenshot_3.png)
+
+Fourth Version - added remove button to the cart
+![fourth_version](https://github.com/anfperez/code-assessment-web/blob/master/assets/screenshot_4.png)
+
+Fifth Version - logging "Object object" to the cart
+![fifth_version](https://github.com/anfperez/code-assessment-web/blob/master/assets/screenshot_5.png)
+
+Sixth Version - logging the objects in the array
+![sixth_version](https://github.com/anfperez/code-assessment-web/blob/master/assets/screenshot_6.png)
+
+Seventh Version - 
