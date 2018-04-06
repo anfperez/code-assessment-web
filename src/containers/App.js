@@ -36,29 +36,9 @@ const App = () => (
 
 export default App
 
-/* This is the Shopping Cart Overlay method I'm trying to implement. I tested it out in one of my test apps before laying it in here
-class App extends React.Component {
-    constructor ( props ) {
-        super( props )
-        this.state= { show : false };
-        this.showShoppingCart = this.showShoppingCart.bind(this)
-    }
-
-    showShoppingCart() {
-        const { show } = this.state;
-        this.setState({ show: true })
-    }
-    render() {
-        return (
-            <div>
-
-                <h1 style={fontStyle}>Swords, Cups, & Wands</h1>
-                <button onClick= {this.showShoppingCart }> Toggle Div </button>
-                { this.state.show && <ShoppingCart />}
-            </div>
-            );
-    }
-}
+/* This is the Shopping Cart Overlay method I'm trying to implement. 
+I tested it out in one of my test apps before laying it in here. it didn't end up working
+I'll leave it in here as notes
 
 class ShoppingCart extends React.Component {
     render() {

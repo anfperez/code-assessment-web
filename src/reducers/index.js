@@ -10,6 +10,7 @@ export default combineReducers({
 const getAddedIds = state => fromCart.getAddedIds(state.cart)
 const getQuantity = (state, id) => fromCart.getQuantity(state.cart, id)
 const getProduct = (state, id) => fromProducts.getProduct(state.products, id)
+//I ended up not needing this function. I ended up just having to use getAddedIds
 //const getAddedNames = (state, id) => fromCart.getAddedNames(state.cart, id)
 
 export const getTotal = state =>

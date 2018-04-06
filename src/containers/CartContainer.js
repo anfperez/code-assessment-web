@@ -10,7 +10,7 @@ import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 //finally got this to work! I needed to pass the product id in here
-      // I also totally redid this section so that it's not the entire ProductsList that returns, just a card
+// I also totally redid this section so that it's not the entire ProductsList that returns, just a card
 const CartContainer = ({ products, productName, total, checkout, removeFromCart, names, quantity
 }) => (
   <div>
@@ -18,9 +18,9 @@ const CartContainer = ({ products, productName, total, checkout, removeFromCart,
       {products.map(product => (
         <Card>
           <CardBody>
-          {product.title}
-      {product.price} + " " + {product.inventory}
-      <button onClick={ () => removeFromCart(product.id) }>Remove</button>
+          <p> Item: {product.title} </p>
+          <p> Price: {product.price}</p>
+      <Button color="secondary" onClick={ () => removeFromCart(product.id) }>Remove</Button>
           </CardBody>
           </Card>
       ))}

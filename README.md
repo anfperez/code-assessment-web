@@ -60,6 +60,8 @@ I tried to implement a Cart overlay using reactstrap. It seemed like a major fac
 
 I was able to get "Remove From Cart" working, albeit with a bunch of errors. First, let's go back to "Add to Cart" -- this actually adds an entire instance of the Products Card to the Cart. The Products Card still behaves as if it were in the ProductsList. That is a major error that I am still trying to address.
 
+Update: Was able to get removeFromCart working in a better way than usual with better functionality than before!
+
 The + and - buttons do not have correct functionality at this time either. Still working on this.
 
 ### Future Improvements
@@ -88,8 +90,8 @@ I can clearly see the array of the Chronograph, Quartz, and Weekender inside the
 ### properly implement the Cart Overlay
 - use reactstrap to generate an onClick element that would open the cart with all products within. Currently stuck at "products.length" being undefined when I push the "View Cart" button.
 
-### get Remove From Cart / Increase Item / Decrease Item to work properly
-- removeFromCart is doing some silly things. Increase and Decrease Item buttons are not working properly yet.
+### get Increase Item / Decrease Item to work properly
+- Increase and Decrease Item buttons are not working properly yet.
 
 ### extract the value from the API call so that I can pass it to getProducts
 - for now, all I have is that [[PromiseValue]]: Array(3) result. I need to figure out how I can get that to work. I am thinking that a deeper understanding of Promises is involved.
