@@ -20,6 +20,7 @@ const CartContainer = ({ products, productName, total, checkout, removeFromCart,
           <CardBody>
           <p> Item: {product.title} </p>
           <p> Price: {product.price}</p>
+          <p> Quantity: {product.quantity} </p>
       <Button color="secondary" onClick={ () => removeFromCart(product.id) }>Remove</Button>
           </CardBody>
           </Card>
