@@ -1,4 +1,4 @@
-# Angela Perez - Work & Co Web Code Assessment
+# Angela Perez - React/Redux Shopping Cart
 
 This is a copy of the [Redux Shopping Cart Example](https://github.com/reactjs/redux/tree/master/examples/shopping-cart).
 
@@ -41,11 +41,6 @@ Note: You're encouraged to show your work by including multiple commits - we'll 
 - Redux (concept of reducers, dispatch, middleware, promises) - haven't worked with React before, learned basic concepts
 - Complex system of Components, Reducers, and Containers
 
-An informal blog was created during construction to document how I was feeling during each stage of creation, methods I tried, and questions I pondered. You can find it on this project as blog.md.
-
-I created a few additional 'test' apps to help architecting solutions. These were useful if I wanted to test one component (i.e. the API call). They are located here:
-https://github.com/anfperez/React_Project
-https://github.com/anfperez/Practicing_Media_Queries
 
 ## Task 1 - Implement Responsive Design
 

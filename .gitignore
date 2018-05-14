@@ -9,3 +9,6 @@ build
 # misc
 .DS_Store
 npm-debug.log
+#will now be hidden from GitHub
+blog.md 
+tasks

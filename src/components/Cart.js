@@ -16,41 +16,7 @@ const Cart  = ({ products, total, names, removeFromCart, onCheckoutClicked, onRe
   console.log("products", products)
   console.log("names", names)
   console.log("quantity", quantity)
-  /* --- the below code was my attempt to get the "names" array to work. It's only passing an empty array to Cart. As of 4/5, I'm still trying to get it to work.
-  const a = JSON.stringify(names[0].title
 
-  let a = JSON.stringify(names[0])
-  let b = typeof (JSON.stringify(names[0]))
-  console.log(b)
-  let nameArray = []
-  let nameArray2 = []
-  Object.keys(names).map(function(key, index){
-    nameArray.push(names[key])
-  });
-  console.log(a)
-  // console.log(c)
-  console.log("nameArray = " + JSON.stringify(nameArray['title']))
-
-  const testArray = { 'a': 1, 'b':2, 'c':3}
-
-  Object.keys(testArray).map(function(key, index) {
-    testArray[key] *= 2;
-  })
-
-   Object.keys(names).map(function(key, index) {
-    nameArray.push(names[key])
-  })
-
-   console.log(nameArray[0])
-
-   Object.keys(nameArray[0]).map(function(key, index) {
-    nameArray2.push(nameArray[0][key])
-  })
-  //console.log(a)
-  //let c = a.split(" ")
-  //console.log(b)
- // console.loc(c)
- */
   const hasProducts = products.length > 0
   console.log("props", props)
   console.log(hasProducts)
